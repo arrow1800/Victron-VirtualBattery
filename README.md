@@ -6,8 +6,8 @@ The idea behind this is that when you have a virtual battery available in Venus 
 
 You can write data to the virtual battery using node-red with the Venus OS Large image. 
 
-[screenshot of virtual battery in venus os](img/virtualbattery-screenshot.png)
-[screenshot of virtual battery in venus os](img/virtualbattery-screenshot1.png)
+![screenshot of virtual battery in venus os](https://github.com/arrow1800/Victron-VirtualBattery/blob/main/img/virtualbattery-screenshot.png)
+![screenshot of virtual battery in venus os](https://github.com/arrow1800/Victron-VirtualBattery/blob/main/img/virtualbattery-screenshot1.png)
 
 ## Node-red
 
@@ -32,7 +32,7 @@ This way you have full control over how and which information flows through the 
 
 see file exampleflow.json you can copy the contents to node-red and import it all at once.
 
-[screenshot of node-red flow](img/node-red-screenshot.png)
+![screenshot of node-red flow](https://github.com/arrow1800/Victron-VirtualBattery/blob/main/img/node-red-screenshot.png)
 
 ## How to - CerboGX
 
