@@ -1,17 +1,17 @@
 # Victron virtual battery
 
-this is a dbus service for the Victron venus OS. it is a virtual battery that doesn't do anything besides being available as a fake battery in de venus OS.
+this is a dbus service for the Victron venus OS. it is a virtual battery that doesn't do anything besides being available as a real battery in de venus OS. this is the only way to make sure that Venus OS and al its connected devices will honor the settings and information that this battery sends.
 
-The idea behind this is that when you have a virtual battery available in Venus OS that that can be configured as the default battery you are able to write any data from any device (multiplusses, one or more BMS'es, smartshunts, etc.) to this virtual 'gateway'. 
+The idea behind this is that when you have a virtual battery available in Venus OS that it can be configured as the default battery. after that you are able to write data to it from any device (multiplusses, one or more BMS'es, smartshunts, etc.). when the information is stored in the virtual battery Venus OS will take care of the rest (making sure all chargers/devices receive the correct information and behave correctly) 
 
-The way to write to the virtual battery can be done using node-red with the Venus OS Large image. 
+You can write data to the virtual battery using node-red with the Venus OS Large image. 
 
 ## Node-red
 
-node-red gives you the option to read/extract information from all devices available on the dbus. that information can be transformed/aggregated in any form and can be used to execute several actions (such as writing the right information to the virtual battery). A few ideas:
+node-red gives you the option to read/extract information from all kinds of devices available on the dbus or from anywhere else. that information can be transformed/aggregated in any form and can be used to execute several actions (such as writing the right information to the virtual battery). A few ideas:
 
-- Use cell voltages read from the specific BMS that you are using
-- Use SOC reading from a victron smartshunt (higher accuracy)
+- Use cell voltages read from a specific BMS that you are using
+- Use SOC readings from a victron smartshunt (higher accuracy)
 - Use Amp reading from the multiplus itself, a specific BMS or a smartshunt
 
 This way you have full control over how and which information flows through the system. You are also able to create your own logic rules, such as; 
@@ -28,13 +28,21 @@ This way you have full control over how and which information flows through the 
 
 ...
 
-## How to
+## How to - CerboGX
 
 Installation:
 - create /data/dbus-virtual-battery directory
 - copy the stuff into it
 - set chmod 744 for ./service/run and ./restart
 - add command ln -s /data/dbus-virtual-battery/service /service/dbus-virtual-battery into /data/rc.local
+
+Configuration:
+- make sure you have enabled modbus over TCP, this is needed for writing new data to the virtual battery
+
+## How to - Node-red
+
+- install this extra package from the node-red palette: ..........
+
 
 
 The service starts automatically after start/restart of the Venus OS. After changing of aggregatebatteries.py or
