@@ -31,12 +31,10 @@ This way you have full control over how and which information flows through the 
 ## How to
 
 Installation:
-- create /data/dbus-aggregate-batteries directory
+- create /data/dbus-virtual-battery directory
 - copy the stuff into it
 - set chmod 744 for ./service/run and ./restart
-- set the parameters in ./settings.py (22 cells LTO batteries in my case)
-- write initial charge guess (in A.h) into ./service/charge
-- add command ln -s /data/dbus-aggregate-batteries/service /service/dbus-aggregate-batteries into /data/rc.local
+- add command ln -s /data/dbus-virtual-battery/service /service/dbus-virtual-battery into /data/rc.local
 
 
 The service starts automatically after start/restart of the Venus OS. After changing of aggregatebatteries.py or

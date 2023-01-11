@@ -9,7 +9,7 @@ import logging
 import sys
 import os
 import dbus
-from settings import *
+# from settings import *
 from datetime import datetime as dt         # for UTC time stamps for logging
 import time as tt                           # for charge measurement
 
@@ -19,21 +19,12 @@ from vedbus import VeDbusService, VeDbusItemImport
 class DbusVirtualBatService(object):
     
     def __init__(self, servicename='com.victronenergy.battery.virtual'):
-        # self._batteries = []
-        # self._multi = None
-        # self._mppts = []
-        # self._scanTrials = 0
-        # self._readTrials = 0
-        # self._MaxChargeVoltage_old = 0
-        # self._MaxChargeCurrent_old = 0
-        # self._MaxDischargeCurrent_old = 0
         self._dbusservice = VeDbusService(servicename)
         self._dbusConn = dbus.SessionBus()  if 'DBUS_SESSION_BUS_ADDRESS' in os.environ else dbus.SystemBus()
-        # self._timeOld = tt.time() 
         
         # Create the mandatory objects
         self._dbusservice.add_mandatory_paths(processname = __file__, processversion = '0.0', connection = 'Virtual',
-			deviceinstance = 0, productid = 0, productname = 'VirtualBattery', firmwareversion = VERSION, 
+			deviceinstance = 15, productid = 0, productname = 'VirtualBattery', firmwareversion = VERSION, 
             hardwareversion = '0.0', connected = 1)
 
         # Create DC paths        
@@ -187,12 +178,12 @@ class DbusVirtualBatService(object):
         return True
     
 def main():
-    logging.basicConfig(filename = 'aggregatebatteries.log', level=logging.INFO)
+    logging.basicConfig(filename = 'virtualbattery.log', level=logging.INFO)
 
     from dbus.mainloop.glib import DBusGMainLoop
     # Have a mainloop, so we can send/receive asynchronous calls to and from dbus
     DBusGMainLoop(set_as_default=True)
-    DbusAggBatService()
+    DbusVirtualBatService()
     logging.info('%s: Connected to dbus, and switching over to GLib.MainLoop() (= event based)' % dt.now())
     mainloop = GLib.MainLoop()
     mainloop.run()
