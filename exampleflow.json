@@ -1,0 +1,2488 @@
+[
+    {
+        "id": "1ceb83823bf626ce",
+        "type": "tab",
+        "label": "Devices to virtual battery",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1a2dd6c925eb721b",
+        "type": "victron-input-battery",
+        "z": "1ceb83823bf626ce",
+        "service": "com.victronenergy.battery.ttyS5",
+        "path": "/Dc/0/Current",
+        "serviceObj": {
+            "service": "com.victronenergy.battery.ttyS5",
+            "name": "SmartShunt 500A/50mV",
+            "paths": [
+                {
+                    "path": "/Alarms/Alarm",
+                    "type": "enum",
+                    "name": "Alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighStarterVoltage",
+                    "type": "enum",
+                    "name": "High starter-voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighTemperature",
+                    "type": "enum",
+                    "name": "High battery temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighVoltage",
+                    "type": "enum",
+                    "name": "High voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowSoc",
+                    "type": "enum",
+                    "name": "Low state-of-charge alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowStarterVoltage",
+                    "type": "enum",
+                    "name": "Low starter-voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowTemperature",
+                    "type": "enum",
+                    "name": "Low battery temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowVoltage",
+                    "type": "enum",
+                    "name": "Low voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/MidVoltage",
+                    "type": "enum",
+                    "name": "Mid-voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/ConsumedAmphours",
+                    "type": "float",
+                    "name": "Consumed Amphours (Ah)"
+                },
+                {
+                    "path": "/Dc/0/Current",
+                    "type": "float",
+                    "name": "Current (A)"
+                },
+                {
+                    "path": "/Dc/0/MidVoltage",
+                    "type": "float",
+                    "name": "Mid-point voltage of the battery bank (V)"
+                },
+                {
+                    "path": "/Dc/0/MidVoltageDeviation",
+                    "type": "float",
+                    "name": "Mid-point deviation of the battery bank (%)"
+                },
+                {
+                    "path": "/Dc/0/Temperature",
+                    "type": "float",
+                    "name": "Battery temperature (C)"
+                },
+                {
+                    "path": "/Dc/0/Voltage",
+                    "type": "float",
+                    "name": "Voltage (V)"
+                },
+                {
+                    "path": "/Dc/1/Voltage",
+                    "type": "float",
+                    "name": "Starter battery voltage (V)"
+                },
+                {
+                    "path": "/History/AutomaticSyncs",
+                    "type": "float",
+                    "name": "Automatic syncs (count)"
+                },
+                {
+                    "path": "/History/AverageDischarge",
+                    "type": "float",
+                    "name": "Average discharge (Ah)"
+                },
+                {
+                    "path": "/History/ChargeCycles",
+                    "type": "float",
+                    "name": "Charge cycles (count)"
+                },
+                {
+                    "path": "/History/ChargedEnergy",
+                    "type": "float",
+                    "name": "Charged Energy (kWh)"
+                },
+                {
+                    "path": "/History/DeepestDischarge",
+                    "type": "float",
+                    "name": "Deepest discharge (Ah)"
+                },
+                {
+                    "path": "/History/DischargedEnergy",
+                    "type": "float",
+                    "name": "Discharged Energy (kWh)"
+                },
+                {
+                    "path": "/History/FullDischarges",
+                    "type": "float",
+                    "name": "Full discharges (count)"
+                },
+                {
+                    "path": "/History/HighStarterVoltageAlarms",
+                    "type": "float",
+                    "name": "High starter voltage alarms (count)"
+                },
+                {
+                    "path": "/History/HighVoltageAlarms",
+                    "type": "float",
+                    "name": "High voltage alarms (count)"
+                },
+                {
+                    "path": "/History/LastDischarge",
+                    "type": "float",
+                    "name": "Last discharge (Ah)"
+                },
+                {
+                    "path": "/History/LowStarterVoltageAlarms",
+                    "type": "float",
+                    "name": "Low starter voltage alarms (count)"
+                },
+                {
+                    "path": "/History/LowVoltageAlarms",
+                    "type": "float",
+                    "name": "Low voltage alarms (count)"
+                },
+                {
+                    "path": "/History/MaximumStarterVoltage",
+                    "type": "float",
+                    "name": "Maximum starter voltage (V DC)"
+                },
+                {
+                    "path": "/History/MaximumVoltage",
+                    "type": "float",
+                    "name": "Maximum voltage (V DC)"
+                },
+                {
+                    "path": "/History/MinimumStarterVoltage",
+                    "type": "float",
+                    "name": "Minimum starter voltage (V DC)"
+                },
+                {
+                    "path": "/History/MinimumVoltage",
+                    "type": "float",
+                    "name": "Minimum voltage (V DC)"
+                },
+                {
+                    "path": "/History/TimeSinceLastFullCharge",
+                    "type": "float",
+                    "name": "Time since last full charge (seconds)"
+                },
+                {
+                    "path": "/History/TotalAhDrawn",
+                    "type": "float",
+                    "name": "Total Ah drawn (Ah)"
+                },
+                {
+                    "path": "/Relay/0/State",
+                    "type": "enum",
+                    "name": "Relay status",
+                    "enum": {
+                        "0": "Open",
+                        "1": "Closed"
+                    }
+                },
+                {
+                    "path": "/Soc",
+                    "type": "float",
+                    "name": "State of charge (%)"
+                },
+                {
+                    "path": "/TimeToGo",
+                    "type": "float",
+                    "name": "Time to go (h)"
+                }
+            ]
+        },
+        "pathObj": {
+            "path": "/Dc/0/Current",
+            "type": "float",
+            "name": "Current (A)"
+        },
+        "initial": "",
+        "name": "",
+        "x": 390,
+        "y": 140,
+        "wires": [
+            [
+                "ad9f294e07431854"
+            ]
+        ]
+    },
+    {
+        "id": "b3c0a538005709de",
+        "type": "victron-input-battery",
+        "z": "1ceb83823bf626ce",
+        "service": "com.victronenergy.battery.ttyS5",
+        "path": "/Soc",
+        "serviceObj": {
+            "service": "com.victronenergy.battery.ttyS5",
+            "name": "SmartShunt 500A/50mV",
+            "paths": [
+                {
+                    "path": "/Alarms/Alarm",
+                    "type": "enum",
+                    "name": "Alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighStarterVoltage",
+                    "type": "enum",
+                    "name": "High starter-voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighTemperature",
+                    "type": "enum",
+                    "name": "High battery temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighVoltage",
+                    "type": "enum",
+                    "name": "High voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowSoc",
+                    "type": "enum",
+                    "name": "Low state-of-charge alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowStarterVoltage",
+                    "type": "enum",
+                    "name": "Low starter-voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowTemperature",
+                    "type": "enum",
+                    "name": "Low battery temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowVoltage",
+                    "type": "enum",
+                    "name": "Low voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/MidVoltage",
+                    "type": "enum",
+                    "name": "Mid-voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/ConsumedAmphours",
+                    "type": "float",
+                    "name": "Consumed Amphours (Ah)"
+                },
+                {
+                    "path": "/Dc/0/Current",
+                    "type": "float",
+                    "name": "Current (A)"
+                },
+                {
+                    "path": "/Dc/0/MidVoltage",
+                    "type": "float",
+                    "name": "Mid-point voltage of the battery bank (V)"
+                },
+                {
+                    "path": "/Dc/0/MidVoltageDeviation",
+                    "type": "float",
+                    "name": "Mid-point deviation of the battery bank (%)"
+                },
+                {
+                    "path": "/Dc/0/Temperature",
+                    "type": "float",
+                    "name": "Battery temperature (C)"
+                },
+                {
+                    "path": "/Dc/0/Voltage",
+                    "type": "float",
+                    "name": "Voltage (V)"
+                },
+                {
+                    "path": "/Dc/1/Voltage",
+                    "type": "float",
+                    "name": "Starter battery voltage (V)"
+                },
+                {
+                    "path": "/History/AutomaticSyncs",
+                    "type": "float",
+                    "name": "Automatic syncs (count)"
+                },
+                {
+                    "path": "/History/AverageDischarge",
+                    "type": "float",
+                    "name": "Average discharge (Ah)"
+                },
+                {
+                    "path": "/History/ChargeCycles",
+                    "type": "float",
+                    "name": "Charge cycles (count)"
+                },
+                {
+                    "path": "/History/ChargedEnergy",
+                    "type": "float",
+                    "name": "Charged Energy (kWh)"
+                },
+                {
+                    "path": "/History/DeepestDischarge",
+                    "type": "float",
+                    "name": "Deepest discharge (Ah)"
+                },
+                {
+                    "path": "/History/DischargedEnergy",
+                    "type": "float",
+                    "name": "Discharged Energy (kWh)"
+                },
+                {
+                    "path": "/History/FullDischarges",
+                    "type": "float",
+                    "name": "Full discharges (count)"
+                },
+                {
+                    "path": "/History/HighStarterVoltageAlarms",
+                    "type": "float",
+                    "name": "High starter voltage alarms (count)"
+                },
+                {
+                    "path": "/History/HighVoltageAlarms",
+                    "type": "float",
+                    "name": "High voltage alarms (count)"
+                },
+                {
+                    "path": "/History/LastDischarge",
+                    "type": "float",
+                    "name": "Last discharge (Ah)"
+                },
+                {
+                    "path": "/History/LowStarterVoltageAlarms",
+                    "type": "float",
+                    "name": "Low starter voltage alarms (count)"
+                },
+                {
+                    "path": "/History/LowVoltageAlarms",
+                    "type": "float",
+                    "name": "Low voltage alarms (count)"
+                },
+                {
+                    "path": "/History/MaximumStarterVoltage",
+                    "type": "float",
+                    "name": "Maximum starter voltage (V DC)"
+                },
+                {
+                    "path": "/History/MaximumVoltage",
+                    "type": "float",
+                    "name": "Maximum voltage (V DC)"
+                },
+                {
+                    "path": "/History/MinimumStarterVoltage",
+                    "type": "float",
+                    "name": "Minimum starter voltage (V DC)"
+                },
+                {
+                    "path": "/History/MinimumVoltage",
+                    "type": "float",
+                    "name": "Minimum voltage (V DC)"
+                },
+                {
+                    "path": "/History/TimeSinceLastFullCharge",
+                    "type": "float",
+                    "name": "Time since last full charge (seconds)"
+                },
+                {
+                    "path": "/History/TotalAhDrawn",
+                    "type": "float",
+                    "name": "Total Ah drawn (Ah)"
+                },
+                {
+                    "path": "/Relay/0/State",
+                    "type": "enum",
+                    "name": "Relay status",
+                    "enum": {
+                        "0": "Open",
+                        "1": "Closed"
+                    }
+                },
+                {
+                    "path": "/Soc",
+                    "type": "float",
+                    "name": "State of charge (%)"
+                },
+                {
+                    "path": "/TimeToGo",
+                    "type": "float",
+                    "name": "Time to go (h)"
+                }
+            ]
+        },
+        "pathObj": {
+            "path": "/Soc",
+            "type": "float",
+            "name": "State of charge (%)"
+        },
+        "initial": "",
+        "name": "",
+        "x": 410,
+        "y": 200,
+        "wires": [
+            [
+                "3f6acb6de37723eb"
+            ]
+        ]
+    },
+    {
+        "id": "ad9f294e07431854",
+        "type": "change",
+        "z": "1ceb83823bf626ce",
+        "name": "flow.current",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Current",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3f6acb6de37723eb",
+        "type": "change",
+        "z": "1ceb83823bf626ce",
+        "name": "flow.soc",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Soc",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b6fbf18e126f214a",
+        "type": "http in",
+        "z": "1ceb83823bf626ce",
+        "name": "",
+        "url": "/virtualbattery",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 1100,
+        "wires": [
+            [
+                "a72fda78e4d7d58f"
+            ]
+        ]
+    },
+    {
+        "id": "4663fcdf33eb8998",
+        "type": "http response",
+        "z": "1ceb83823bf626ce",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 580,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "a72fda78e4d7d58f",
+        "type": "function",
+        "z": "1ceb83823bf626ce",
+        "name": "flow to dictionary",
+        "func": "\n\nlet k1 = 'Soc'\nlet k2 = 'Current'\nlet k3 = 'Voltage'\nlet k4 = 'Power'\nlet k5 = 'MinCellTemperature'\nlet k6 = 'MaxCellTemperature'\nlet k7 = 'MaxChargeCurrent'\nlet k8 = 'MaxDischargeCurrent'\nlet k9 = 'MaxChargeVoltage'\nlet k10 = 'MaxCellVoltage'\nlet k11 = 'MinCellVoltage'\n\nlet arr = [k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11]\n\n\nlet payload = {}\nfor(let i in arr){\n    let v = flow.get(arr[i]) ?? 0;\n    \n    payload[arr[i]] = v\n}\n\nmsg.payload = payload\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 1100,
+        "wires": [
+            [
+                "4663fcdf33eb8998"
+            ]
+        ]
+    },
+    {
+        "id": "1c0834172ad30edf",
+        "type": "debug",
+        "z": "1ceb83823bf626ce",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "7dce6425b3d8dad5",
+        "type": "victron-input-battery",
+        "z": "1ceb83823bf626ce",
+        "service": "com.victronenergy.battery.ttyS5",
+        "path": "/Dc/0/Voltage",
+        "serviceObj": {
+            "service": "com.victronenergy.battery.ttyS5",
+            "name": "SmartShunt 500A/50mV",
+            "paths": [
+                {
+                    "path": "/Alarms/Alarm",
+                    "type": "enum",
+                    "name": "Alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighStarterVoltage",
+                    "type": "enum",
+                    "name": "High starter-voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighTemperature",
+                    "type": "enum",
+                    "name": "High battery temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighVoltage",
+                    "type": "enum",
+                    "name": "High voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowSoc",
+                    "type": "enum",
+                    "name": "Low state-of-charge alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowStarterVoltage",
+                    "type": "enum",
+                    "name": "Low starter-voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowTemperature",
+                    "type": "enum",
+                    "name": "Low battery temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowVoltage",
+                    "type": "enum",
+                    "name": "Low voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/MidVoltage",
+                    "type": "enum",
+                    "name": "Mid-voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/ConsumedAmphours",
+                    "type": "float",
+                    "name": "Consumed Amphours (Ah)"
+                },
+                {
+                    "path": "/Dc/0/Current",
+                    "type": "float",
+                    "name": "Current (A)"
+                },
+                {
+                    "path": "/Dc/0/MidVoltage",
+                    "type": "float",
+                    "name": "Mid-point voltage of the battery bank (V)"
+                },
+                {
+                    "path": "/Dc/0/MidVoltageDeviation",
+                    "type": "float",
+                    "name": "Mid-point deviation of the battery bank (%)"
+                },
+                {
+                    "path": "/Dc/0/Temperature",
+                    "type": "float",
+                    "name": "Battery temperature (C)"
+                },
+                {
+                    "path": "/Dc/0/Voltage",
+                    "type": "float",
+                    "name": "Voltage (V)"
+                },
+                {
+                    "path": "/Dc/1/Voltage",
+                    "type": "float",
+                    "name": "Starter battery voltage (V)"
+                },
+                {
+                    "path": "/History/AutomaticSyncs",
+                    "type": "float",
+                    "name": "Automatic syncs (count)"
+                },
+                {
+                    "path": "/History/AverageDischarge",
+                    "type": "float",
+                    "name": "Average discharge (Ah)"
+                },
+                {
+                    "path": "/History/ChargeCycles",
+                    "type": "float",
+                    "name": "Charge cycles (count)"
+                },
+                {
+                    "path": "/History/ChargedEnergy",
+                    "type": "float",
+                    "name": "Charged Energy (kWh)"
+                },
+                {
+                    "path": "/History/DeepestDischarge",
+                    "type": "float",
+                    "name": "Deepest discharge (Ah)"
+                },
+                {
+                    "path": "/History/DischargedEnergy",
+                    "type": "float",
+                    "name": "Discharged Energy (kWh)"
+                },
+                {
+                    "path": "/History/FullDischarges",
+                    "type": "float",
+                    "name": "Full discharges (count)"
+                },
+                {
+                    "path": "/History/HighStarterVoltageAlarms",
+                    "type": "float",
+                    "name": "High starter voltage alarms (count)"
+                },
+                {
+                    "path": "/History/HighVoltageAlarms",
+                    "type": "float",
+                    "name": "High voltage alarms (count)"
+                },
+                {
+                    "path": "/History/LastDischarge",
+                    "type": "float",
+                    "name": "Last discharge (Ah)"
+                },
+                {
+                    "path": "/History/LowStarterVoltageAlarms",
+                    "type": "float",
+                    "name": "Low starter voltage alarms (count)"
+                },
+                {
+                    "path": "/History/LowVoltageAlarms",
+                    "type": "float",
+                    "name": "Low voltage alarms (count)"
+                },
+                {
+                    "path": "/History/MaximumStarterVoltage",
+                    "type": "float",
+                    "name": "Maximum starter voltage (V DC)"
+                },
+                {
+                    "path": "/History/MaximumVoltage",
+                    "type": "float",
+                    "name": "Maximum voltage (V DC)"
+                },
+                {
+                    "path": "/History/MinimumStarterVoltage",
+                    "type": "float",
+                    "name": "Minimum starter voltage (V DC)"
+                },
+                {
+                    "path": "/History/MinimumVoltage",
+                    "type": "float",
+                    "name": "Minimum voltage (V DC)"
+                },
+                {
+                    "path": "/History/TimeSinceLastFullCharge",
+                    "type": "float",
+                    "name": "Time since last full charge (seconds)"
+                },
+                {
+                    "path": "/History/TotalAhDrawn",
+                    "type": "float",
+                    "name": "Total Ah drawn (Ah)"
+                },
+                {
+                    "path": "/Relay/0/State",
+                    "type": "enum",
+                    "name": "Relay status",
+                    "enum": {
+                        "0": "Open",
+                        "1": "Closed"
+                    }
+                },
+                {
+                    "path": "/Soc",
+                    "type": "float",
+                    "name": "State of charge (%)"
+                },
+                {
+                    "path": "/TimeToGo",
+                    "type": "float",
+                    "name": "Time to go (h)"
+                }
+            ]
+        },
+        "pathObj": {
+            "path": "/Dc/0/Voltage",
+            "type": "float",
+            "name": "Voltage (V)"
+        },
+        "initial": "",
+        "name": "",
+        "x": 390,
+        "y": 260,
+        "wires": [
+            [
+                "6f75e576640949e1"
+            ]
+        ]
+    },
+    {
+        "id": "6f75e576640949e1",
+        "type": "change",
+        "z": "1ceb83823bf626ce",
+        "name": "flow.voltage",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Voltage",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "29c9c5660bea12a9",
+        "type": "inject",
+        "z": "1ceb83823bf626ce",
+        "name": "on startup",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 450,
+        "y": 40,
+        "wires": [
+            [
+                "57596cea29c057c4"
+            ]
+        ]
+    },
+    {
+        "id": "57596cea29c057c4",
+        "type": "change",
+        "z": "1ceb83823bf626ce",
+        "name": "set defaults",
+        "rules": [
+            {
+                "t": "set",
+                "p": "MaxChargeVoltage",
+                "pt": "flow",
+                "to": "54.40",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0e5b3ab2f54d1057",
+        "type": "comment",
+        "z": "1ceb83823bf626ce",
+        "name": "README / HTTP endpoint for driver",
+        "info": "this is the HTTP rest endpoint that is used by the virtual battery driver in venus os. when it receives a request it sends a response with all the settings for the virtual battery. that is then being processed by the driver",
+        "x": 240,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "e3a47a71878e85ae",
+        "type": "victron-input-battery",
+        "z": "1ceb83823bf626ce",
+        "service": "com.victronenergy.battery.ttyUSB2",
+        "path": "/System/MinCellVoltage",
+        "serviceObj": {
+            "service": "com.victronenergy.battery.ttyUSB2",
+            "name": "SerialBattery(Jkbms)",
+            "paths": [
+                {
+                    "path": "/Alarms/CellImbalance",
+                    "type": "enum",
+                    "name": "Cell Imbalance alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Warning",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighChargeCurrent",
+                    "type": "enum",
+                    "name": "High charge current alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Warning",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighChargeTemperature",
+                    "type": "enum",
+                    "name": "High charge temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Warning",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighDischargeCurrent",
+                    "type": "enum",
+                    "name": "High discharge current alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Warning",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighTemperature",
+                    "type": "enum",
+                    "name": "High battery temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighVoltage",
+                    "type": "enum",
+                    "name": "High voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/InternalFailure",
+                    "type": "enum",
+                    "name": "Internal error alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Warning",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowCellVoltage",
+                    "type": "enum",
+                    "name": "Low cell voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Almost discharged",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowChargeTemperature",
+                    "type": "enum",
+                    "name": "Low charge temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Warning",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowSoc",
+                    "type": "enum",
+                    "name": "Low state-of-charge alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowTemperature",
+                    "type": "enum",
+                    "name": "Low battery temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowVoltage",
+                    "type": "enum",
+                    "name": "Low voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Balancing",
+                    "type": "enum",
+                    "name": "Balancing",
+                    "enum": {
+                        "0": "Inactive",
+                        "1": "Active"
+                    }
+                },
+                {
+                    "path": "/Capacity",
+                    "type": "float",
+                    "name": "Capacity (Ah)"
+                },
+                {
+                    "path": "/ConsumedAmphours",
+                    "type": "float",
+                    "name": "Consumed Amphours (Ah)"
+                },
+                {
+                    "path": "/Dc/0/Current",
+                    "type": "float",
+                    "name": "Current (A)"
+                },
+                {
+                    "path": "/Dc/0/MidVoltage",
+                    "type": "float",
+                    "name": "Mid-point voltage of the battery bank (V)"
+                },
+                {
+                    "path": "/Dc/0/MidVoltageDeviation",
+                    "type": "float",
+                    "name": "Mid-point deviation of the battery bank (%)"
+                },
+                {
+                    "path": "/Dc/0/Temperature",
+                    "type": "float",
+                    "name": "Battery temperature (C)"
+                },
+                {
+                    "path": "/Dc/0/Voltage",
+                    "type": "float",
+                    "name": "Voltage (V)"
+                },
+                {
+                    "path": "/History/ChargeCycles",
+                    "type": "float",
+                    "name": "Charge cycles (count)"
+                },
+                {
+                    "path": "/History/TotalAhDrawn",
+                    "type": "float",
+                    "name": "Total Ah drawn (Ah)"
+                },
+                {
+                    "path": "/Info/BatteryLowVoltage",
+                    "type": "float",
+                    "name": "Min discharge voltage (V DC)"
+                },
+                {
+                    "path": "/Info/MaxChargeCurrent",
+                    "type": "float",
+                    "name": "CCL - Charge Current Limit (A)"
+                },
+                {
+                    "path": "/Info/MaxChargeVoltage",
+                    "type": "float",
+                    "name": "CVL - Charge Voltage Limit (V)"
+                },
+                {
+                    "path": "/Info/MaxDischargeCurrent",
+                    "type": "float",
+                    "name": "DCL - Discharge Current Limit (A)"
+                },
+                {
+                    "path": "/Io/AllowToCharge",
+                    "type": "enum",
+                    "name": "ATC (Allow to Charge)",
+                    "enum": {
+                        "0": "No",
+                        "1": "Yes"
+                    }
+                },
+                {
+                    "path": "/Io/AllowToDischarge",
+                    "type": "enum",
+                    "name": "ATD (Allow to Discharge)",
+                    "enum": {
+                        "0": "No",
+                        "1": "Yes"
+                    }
+                },
+                {
+                    "path": "/Soc",
+                    "type": "float",
+                    "name": "State of charge (%)"
+                },
+                {
+                    "path": "/System/MaxVoltageCellId",
+                    "type": "string",
+                    "name": "System; ID of module with highest cell voltage"
+                },
+                {
+                    "path": "/System/MaxCellTemperature",
+                    "type": "float",
+                    "name": "Maximum cell temperature (Degrees celsius)"
+                },
+                {
+                    "path": "/System/MaxCellVoltage",
+                    "type": "float",
+                    "name": "System; maximum cell voltage (V DC)"
+                },
+                {
+                    "path": "/System/MinVoltageCellId",
+                    "type": "string",
+                    "name": "System; ID of module with lowest cell voltage"
+                },
+                {
+                    "path": "/System/MinCellTemperature",
+                    "type": "float",
+                    "name": "Minimum cell temperature (Degrees celsius)"
+                },
+                {
+                    "path": "/System/MinCellVoltage",
+                    "type": "float",
+                    "name": "System; minimum cell voltage (V DC)"
+                },
+                {
+                    "path": "/System/NrOfCellsPerBattery",
+                    "type": "float",
+                    "name": "System; number of cells per battery (count)"
+                },
+                {
+                    "path": "/System/NrOfModulesBlockingCharge",
+                    "type": "integer",
+                    "name": "Number of modules blocking charge"
+                },
+                {
+                    "path": "/System/NrOfModulesBlockingDischarge",
+                    "type": "integer",
+                    "name": "Number of modules blocking discharge"
+                },
+                {
+                    "path": "/System/NrOfModulesOffline",
+                    "type": "integer",
+                    "name": "Number of offline modules"
+                },
+                {
+                    "path": "/System/NrOfModulesOnline",
+                    "type": "integer",
+                    "name": "Number of online modules"
+                }
+            ]
+        },
+        "pathObj": {
+            "path": "/System/MinCellVoltage",
+            "type": "float",
+            "name": "System; minimum cell voltage (V DC)"
+        },
+        "initial": "",
+        "name": "",
+        "x": 300,
+        "y": 440,
+        "wires": [
+            [
+                "641d0556e2c545c5"
+            ]
+        ]
+    },
+    {
+        "id": "641d0556e2c545c5",
+        "type": "change",
+        "z": "1ceb83823bf626ce",
+        "name": "flow.minCellVoltage1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "minCellVoltage1",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f7e59b7468c7cecf",
+        "type": "change",
+        "z": "1ceb83823bf626ce",
+        "name": "flow.maxCellVoltage1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "maxCellVoltage1",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a26d3cc9a9a9dbc5",
+        "type": "victron-input-battery",
+        "z": "1ceb83823bf626ce",
+        "service": "com.victronenergy.battery.ttyUSB2",
+        "path": "/System/MaxCellVoltage",
+        "serviceObj": {
+            "service": "com.victronenergy.battery.ttyUSB2",
+            "name": "SerialBattery(Jkbms)",
+            "paths": [
+                {
+                    "path": "/Alarms/CellImbalance",
+                    "type": "enum",
+                    "name": "Cell Imbalance alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Warning",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighChargeCurrent",
+                    "type": "enum",
+                    "name": "High charge current alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Warning",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighChargeTemperature",
+                    "type": "enum",
+                    "name": "High charge temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Warning",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighDischargeCurrent",
+                    "type": "enum",
+                    "name": "High discharge current alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Warning",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighTemperature",
+                    "type": "enum",
+                    "name": "High battery temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighVoltage",
+                    "type": "enum",
+                    "name": "High voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/InternalFailure",
+                    "type": "enum",
+                    "name": "Internal error alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Warning",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowCellVoltage",
+                    "type": "enum",
+                    "name": "Low cell voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Almost discharged",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowChargeTemperature",
+                    "type": "enum",
+                    "name": "Low charge temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Warning",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowSoc",
+                    "type": "enum",
+                    "name": "Low state-of-charge alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowTemperature",
+                    "type": "enum",
+                    "name": "Low battery temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowVoltage",
+                    "type": "enum",
+                    "name": "Low voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Balancing",
+                    "type": "enum",
+                    "name": "Balancing",
+                    "enum": {
+                        "0": "Inactive",
+                        "1": "Active"
+                    }
+                },
+                {
+                    "path": "/Capacity",
+                    "type": "float",
+                    "name": "Capacity (Ah)"
+                },
+                {
+                    "path": "/ConsumedAmphours",
+                    "type": "float",
+                    "name": "Consumed Amphours (Ah)"
+                },
+                {
+                    "path": "/Dc/0/Current",
+                    "type": "float",
+                    "name": "Current (A)"
+                },
+                {
+                    "path": "/Dc/0/MidVoltage",
+                    "type": "float",
+                    "name": "Mid-point voltage of the battery bank (V)"
+                },
+                {
+                    "path": "/Dc/0/MidVoltageDeviation",
+                    "type": "float",
+                    "name": "Mid-point deviation of the battery bank (%)"
+                },
+                {
+                    "path": "/Dc/0/Temperature",
+                    "type": "float",
+                    "name": "Battery temperature (C)"
+                },
+                {
+                    "path": "/Dc/0/Voltage",
+                    "type": "float",
+                    "name": "Voltage (V)"
+                },
+                {
+                    "path": "/History/ChargeCycles",
+                    "type": "float",
+                    "name": "Charge cycles (count)"
+                },
+                {
+                    "path": "/History/TotalAhDrawn",
+                    "type": "float",
+                    "name": "Total Ah drawn (Ah)"
+                },
+                {
+                    "path": "/Info/BatteryLowVoltage",
+                    "type": "float",
+                    "name": "Min discharge voltage (V DC)"
+                },
+                {
+                    "path": "/Info/MaxChargeCurrent",
+                    "type": "float",
+                    "name": "CCL - Charge Current Limit (A)"
+                },
+                {
+                    "path": "/Info/MaxChargeVoltage",
+                    "type": "float",
+                    "name": "CVL - Charge Voltage Limit (V)"
+                },
+                {
+                    "path": "/Info/MaxDischargeCurrent",
+                    "type": "float",
+                    "name": "DCL - Discharge Current Limit (A)"
+                },
+                {
+                    "path": "/Io/AllowToCharge",
+                    "type": "enum",
+                    "name": "ATC (Allow to Charge)",
+                    "enum": {
+                        "0": "No",
+                        "1": "Yes"
+                    }
+                },
+                {
+                    "path": "/Io/AllowToDischarge",
+                    "type": "enum",
+                    "name": "ATD (Allow to Discharge)",
+                    "enum": {
+                        "0": "No",
+                        "1": "Yes"
+                    }
+                },
+                {
+                    "path": "/Soc",
+                    "type": "float",
+                    "name": "State of charge (%)"
+                },
+                {
+                    "path": "/System/MaxVoltageCellId",
+                    "type": "string",
+                    "name": "System; ID of module with highest cell voltage"
+                },
+                {
+                    "path": "/System/MaxCellTemperature",
+                    "type": "float",
+                    "name": "Maximum cell temperature (Degrees celsius)"
+                },
+                {
+                    "path": "/System/MaxCellVoltage",
+                    "type": "float",
+                    "name": "System; maximum cell voltage (V DC)"
+                },
+                {
+                    "path": "/System/MinVoltageCellId",
+                    "type": "string",
+                    "name": "System; ID of module with lowest cell voltage"
+                },
+                {
+                    "path": "/System/MinCellTemperature",
+                    "type": "float",
+                    "name": "Minimum cell temperature (Degrees celsius)"
+                },
+                {
+                    "path": "/System/MinCellVoltage",
+                    "type": "float",
+                    "name": "System; minimum cell voltage (V DC)"
+                },
+                {
+                    "path": "/System/NrOfCellsPerBattery",
+                    "type": "float",
+                    "name": "System; number of cells per battery (count)"
+                },
+                {
+                    "path": "/System/NrOfModulesBlockingCharge",
+                    "type": "integer",
+                    "name": "Number of modules blocking charge"
+                },
+                {
+                    "path": "/System/NrOfModulesBlockingDischarge",
+                    "type": "integer",
+                    "name": "Number of modules blocking discharge"
+                },
+                {
+                    "path": "/System/NrOfModulesOffline",
+                    "type": "integer",
+                    "name": "Number of offline modules"
+                },
+                {
+                    "path": "/System/NrOfModulesOnline",
+                    "type": "integer",
+                    "name": "Number of online modules"
+                }
+            ]
+        },
+        "pathObj": {
+            "path": "/System/MaxCellVoltage",
+            "type": "float",
+            "name": "System; maximum cell voltage (V DC)"
+        },
+        "initial": "",
+        "name": "",
+        "x": 300,
+        "y": 500,
+        "wires": [
+            [
+                "f7e59b7468c7cecf"
+            ]
+        ]
+    },
+    {
+        "id": "7544dce1a0bc3094",
+        "type": "victron-input-battery",
+        "z": "1ceb83823bf626ce",
+        "service": "com.victronenergy.battery.ttyUSB0",
+        "path": "/System/MinCellVoltage",
+        "serviceObj": {
+            "service": "com.victronenergy.battery.ttyUSB0",
+            "name": "SerialBattery(Jkbms)",
+            "paths": [
+                {
+                    "path": "/Alarms/CellImbalance",
+                    "type": "enum",
+                    "name": "Cell Imbalance alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Warning",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighChargeCurrent",
+                    "type": "enum",
+                    "name": "High charge current alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Warning",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighChargeTemperature",
+                    "type": "enum",
+                    "name": "High charge temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Warning",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighDischargeCurrent",
+                    "type": "enum",
+                    "name": "High discharge current alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Warning",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighTemperature",
+                    "type": "enum",
+                    "name": "High battery temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighVoltage",
+                    "type": "enum",
+                    "name": "High voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/InternalFailure",
+                    "type": "enum",
+                    "name": "Internal error alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Warning",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowCellVoltage",
+                    "type": "enum",
+                    "name": "Low cell voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Almost discharged",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowChargeTemperature",
+                    "type": "enum",
+                    "name": "Low charge temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Warning",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowSoc",
+                    "type": "enum",
+                    "name": "Low state-of-charge alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowTemperature",
+                    "type": "enum",
+                    "name": "Low battery temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowVoltage",
+                    "type": "enum",
+                    "name": "Low voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Balancing",
+                    "type": "enum",
+                    "name": "Balancing",
+                    "enum": {
+                        "0": "Inactive",
+                        "1": "Active"
+                    }
+                },
+                {
+                    "path": "/Capacity",
+                    "type": "float",
+                    "name": "Capacity (Ah)"
+                },
+                {
+                    "path": "/ConsumedAmphours",
+                    "type": "float",
+                    "name": "Consumed Amphours (Ah)"
+                },
+                {
+                    "path": "/Dc/0/Current",
+                    "type": "float",
+                    "name": "Current (A)"
+                },
+                {
+                    "path": "/Dc/0/MidVoltage",
+                    "type": "float",
+                    "name": "Mid-point voltage of the battery bank (V)"
+                },
+                {
+                    "path": "/Dc/0/MidVoltageDeviation",
+                    "type": "float",
+                    "name": "Mid-point deviation of the battery bank (%)"
+                },
+                {
+                    "path": "/Dc/0/Temperature",
+                    "type": "float",
+                    "name": "Battery temperature (C)"
+                },
+                {
+                    "path": "/Dc/0/Voltage",
+                    "type": "float",
+                    "name": "Voltage (V)"
+                },
+                {
+                    "path": "/History/ChargeCycles",
+                    "type": "float",
+                    "name": "Charge cycles (count)"
+                },
+                {
+                    "path": "/History/TotalAhDrawn",
+                    "type": "float",
+                    "name": "Total Ah drawn (Ah)"
+                },
+                {
+                    "path": "/Info/BatteryLowVoltage",
+                    "type": "float",
+                    "name": "Min discharge voltage (V DC)"
+                },
+                {
+                    "path": "/Info/MaxChargeCurrent",
+                    "type": "float",
+                    "name": "CCL - Charge Current Limit (A)"
+                },
+                {
+                    "path": "/Info/MaxChargeVoltage",
+                    "type": "float",
+                    "name": "CVL - Charge Voltage Limit (V)"
+                },
+                {
+                    "path": "/Info/MaxDischargeCurrent",
+                    "type": "float",
+                    "name": "DCL - Discharge Current Limit (A)"
+                },
+                {
+                    "path": "/Io/AllowToCharge",
+                    "type": "enum",
+                    "name": "ATC (Allow to Charge)",
+                    "enum": {
+                        "0": "No",
+                        "1": "Yes"
+                    }
+                },
+                {
+                    "path": "/Io/AllowToDischarge",
+                    "type": "enum",
+                    "name": "ATD (Allow to Discharge)",
+                    "enum": {
+                        "0": "No",
+                        "1": "Yes"
+                    }
+                },
+                {
+                    "path": "/Soc",
+                    "type": "float",
+                    "name": "State of charge (%)"
+                },
+                {
+                    "path": "/System/MaxVoltageCellId",
+                    "type": "string",
+                    "name": "System; ID of module with highest cell voltage"
+                },
+                {
+                    "path": "/System/MaxCellTemperature",
+                    "type": "float",
+                    "name": "Maximum cell temperature (Degrees celsius)"
+                },
+                {
+                    "path": "/System/MaxCellVoltage",
+                    "type": "float",
+                    "name": "System; maximum cell voltage (V DC)"
+                },
+                {
+                    "path": "/System/MinVoltageCellId",
+                    "type": "string",
+                    "name": "System; ID of module with lowest cell voltage"
+                },
+                {
+                    "path": "/System/MinCellTemperature",
+                    "type": "float",
+                    "name": "Minimum cell temperature (Degrees celsius)"
+                },
+                {
+                    "path": "/System/MinCellVoltage",
+                    "type": "float",
+                    "name": "System; minimum cell voltage (V DC)"
+                },
+                {
+                    "path": "/System/NrOfCellsPerBattery",
+                    "type": "float",
+                    "name": "System; number of cells per battery (count)"
+                },
+                {
+                    "path": "/System/NrOfModulesBlockingCharge",
+                    "type": "integer",
+                    "name": "Number of modules blocking charge"
+                },
+                {
+                    "path": "/System/NrOfModulesBlockingDischarge",
+                    "type": "integer",
+                    "name": "Number of modules blocking discharge"
+                },
+                {
+                    "path": "/System/NrOfModulesOffline",
+                    "type": "integer",
+                    "name": "Number of offline modules"
+                },
+                {
+                    "path": "/System/NrOfModulesOnline",
+                    "type": "integer",
+                    "name": "Number of online modules"
+                }
+            ]
+        },
+        "pathObj": {
+            "path": "/System/MinCellVoltage",
+            "type": "float",
+            "name": "System; minimum cell voltage (V DC)"
+        },
+        "initial": "",
+        "name": "",
+        "x": 300,
+        "y": 600,
+        "wires": [
+            [
+                "d9757b79045821a8"
+            ]
+        ]
+    },
+    {
+        "id": "d9757b79045821a8",
+        "type": "change",
+        "z": "1ceb83823bf626ce",
+        "name": "flow.minCellVoltage2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "minCellVoltage2",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d9f7de176d34f7a0",
+        "type": "change",
+        "z": "1ceb83823bf626ce",
+        "name": "flow.maxCellVoltage2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "maxCellVoltage2",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "00dbff6cec95caf5",
+        "type": "victron-input-battery",
+        "z": "1ceb83823bf626ce",
+        "service": "com.victronenergy.battery.ttyUSB0",
+        "path": "/System/MaxCellVoltage",
+        "serviceObj": {
+            "service": "com.victronenergy.battery.ttyUSB0",
+            "name": "SerialBattery(Jkbms)",
+            "paths": [
+                {
+                    "path": "/Alarms/CellImbalance",
+                    "type": "enum",
+                    "name": "Cell Imbalance alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Warning",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighChargeCurrent",
+                    "type": "enum",
+                    "name": "High charge current alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Warning",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighChargeTemperature",
+                    "type": "enum",
+                    "name": "High charge temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Warning",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighDischargeCurrent",
+                    "type": "enum",
+                    "name": "High discharge current alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Warning",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighTemperature",
+                    "type": "enum",
+                    "name": "High battery temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighVoltage",
+                    "type": "enum",
+                    "name": "High voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/InternalFailure",
+                    "type": "enum",
+                    "name": "Internal error alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Warning",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowCellVoltage",
+                    "type": "enum",
+                    "name": "Low cell voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Almost discharged",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowChargeTemperature",
+                    "type": "enum",
+                    "name": "Low charge temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "1": "Warning",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowSoc",
+                    "type": "enum",
+                    "name": "Low state-of-charge alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowTemperature",
+                    "type": "enum",
+                    "name": "Low battery temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowVoltage",
+                    "type": "enum",
+                    "name": "Low voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Balancing",
+                    "type": "enum",
+                    "name": "Balancing",
+                    "enum": {
+                        "0": "Inactive",
+                        "1": "Active"
+                    }
+                },
+                {
+                    "path": "/Capacity",
+                    "type": "float",
+                    "name": "Capacity (Ah)"
+                },
+                {
+                    "path": "/ConsumedAmphours",
+                    "type": "float",
+                    "name": "Consumed Amphours (Ah)"
+                },
+                {
+                    "path": "/Dc/0/Current",
+                    "type": "float",
+                    "name": "Current (A)"
+                },
+                {
+                    "path": "/Dc/0/MidVoltage",
+                    "type": "float",
+                    "name": "Mid-point voltage of the battery bank (V)"
+                },
+                {
+                    "path": "/Dc/0/MidVoltageDeviation",
+                    "type": "float",
+                    "name": "Mid-point deviation of the battery bank (%)"
+                },
+                {
+                    "path": "/Dc/0/Temperature",
+                    "type": "float",
+                    "name": "Battery temperature (C)"
+                },
+                {
+                    "path": "/Dc/0/Voltage",
+                    "type": "float",
+                    "name": "Voltage (V)"
+                },
+                {
+                    "path": "/History/ChargeCycles",
+                    "type": "float",
+                    "name": "Charge cycles (count)"
+                },
+                {
+                    "path": "/History/TotalAhDrawn",
+                    "type": "float",
+                    "name": "Total Ah drawn (Ah)"
+                },
+                {
+                    "path": "/Info/BatteryLowVoltage",
+                    "type": "float",
+                    "name": "Min discharge voltage (V DC)"
+                },
+                {
+                    "path": "/Info/MaxChargeCurrent",
+                    "type": "float",
+                    "name": "CCL - Charge Current Limit (A)"
+                },
+                {
+                    "path": "/Info/MaxChargeVoltage",
+                    "type": "float",
+                    "name": "CVL - Charge Voltage Limit (V)"
+                },
+                {
+                    "path": "/Info/MaxDischargeCurrent",
+                    "type": "float",
+                    "name": "DCL - Discharge Current Limit (A)"
+                },
+                {
+                    "path": "/Io/AllowToCharge",
+                    "type": "enum",
+                    "name": "ATC (Allow to Charge)",
+                    "enum": {
+                        "0": "No",
+                        "1": "Yes"
+                    }
+                },
+                {
+                    "path": "/Io/AllowToDischarge",
+                    "type": "enum",
+                    "name": "ATD (Allow to Discharge)",
+                    "enum": {
+                        "0": "No",
+                        "1": "Yes"
+                    }
+                },
+                {
+                    "path": "/Soc",
+                    "type": "float",
+                    "name": "State of charge (%)"
+                },
+                {
+                    "path": "/System/MaxVoltageCellId",
+                    "type": "string",
+                    "name": "System; ID of module with highest cell voltage"
+                },
+                {
+                    "path": "/System/MaxCellTemperature",
+                    "type": "float",
+                    "name": "Maximum cell temperature (Degrees celsius)"
+                },
+                {
+                    "path": "/System/MaxCellVoltage",
+                    "type": "float",
+                    "name": "System; maximum cell voltage (V DC)"
+                },
+                {
+                    "path": "/System/MinVoltageCellId",
+                    "type": "string",
+                    "name": "System; ID of module with lowest cell voltage"
+                },
+                {
+                    "path": "/System/MinCellTemperature",
+                    "type": "float",
+                    "name": "Minimum cell temperature (Degrees celsius)"
+                },
+                {
+                    "path": "/System/MinCellVoltage",
+                    "type": "float",
+                    "name": "System; minimum cell voltage (V DC)"
+                },
+                {
+                    "path": "/System/NrOfCellsPerBattery",
+                    "type": "float",
+                    "name": "System; number of cells per battery (count)"
+                },
+                {
+                    "path": "/System/NrOfModulesBlockingCharge",
+                    "type": "integer",
+                    "name": "Number of modules blocking charge"
+                },
+                {
+                    "path": "/System/NrOfModulesBlockingDischarge",
+                    "type": "integer",
+                    "name": "Number of modules blocking discharge"
+                },
+                {
+                    "path": "/System/NrOfModulesOffline",
+                    "type": "integer",
+                    "name": "Number of offline modules"
+                },
+                {
+                    "path": "/System/NrOfModulesOnline",
+                    "type": "integer",
+                    "name": "Number of online modules"
+                }
+            ]
+        },
+        "pathObj": {
+            "path": "/System/MaxCellVoltage",
+            "type": "float",
+            "name": "System; maximum cell voltage (V DC)"
+        },
+        "initial": "",
+        "name": "",
+        "x": 300,
+        "y": 660,
+        "wires": [
+            [
+                "d9f7de176d34f7a0"
+            ]
+        ]
+    },
+    {
+        "id": "6f18100116a2bf8e",
+        "type": "comment",
+        "z": "1ceb83823bf626ce",
+        "name": "First battery with BMS",
+        "info": "",
+        "x": 180,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "3d0161ec735e6767",
+        "type": "comment",
+        "z": "1ceb83823bf626ce",
+        "name": "Second battery with BMS",
+        "info": "",
+        "x": 190,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "feec784551f7da5e",
+        "type": "inject",
+        "z": "1ceb83823bf626ce",
+        "name": "every sec",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 250,
+        "y": 840,
+        "wires": [
+            [
+                "2c767dedb9794c94",
+                "d343c3f0558215f9",
+                "5d17457c95b5970b"
+            ]
+        ]
+    },
+    {
+        "id": "f0f3e314e9d111f8",
+        "type": "rbe",
+        "z": "1ceb83823bf626ce",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "topi": "topic",
+        "x": 730,
+        "y": 840,
+        "wires": [
+            [
+                "c2af3567952dc598"
+            ]
+        ]
+    },
+    {
+        "id": "2c767dedb9794c94",
+        "type": "function",
+        "z": "1ceb83823bf626ce",
+        "name": "calculate max charge current",
+        "func": "let maxchargeCurrent = 200\n\nlet configuredMinCellV = 2.80\nlet configuredMaxCellV = 3.40\n\nlet configuredBankMinVoltage = 16 * configuredMinCellV\nlet configuredBankMaxVoltage = 16 * configuredMaxCellV\n\nlet bankVoltage = flow.get('Voltage')\n//let soc = flow.get('soc')\n\nlet minCellV1 = flow.get('minCellVoltage1')\nlet maxCellV1 = flow.get('maxCellVoltage1')\nlet minCellV2 = flow.get('minCellVoltage2')\nlet maxCellV2 = flow.get('maxCellVoltage2')\nlet minCellV = minCellV1 < minCellV2 ? minCellV1 : minCellV2\nlet maxCellV = maxCellV1 > maxCellV2 ? maxCellV1 : maxCellV2\n\n\n//TODO work with soc\n//bankVoltage < configuredBankMaxVoltage && \nif(maxCellV > configuredMaxCellV){\n    node.warn('cell voltage to high, setting charge current to zero')\n\n    msg.payload = 0\n}\nelse{\n    msg.payload = maxchargeCurrent\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 840,
+        "wires": [
+            [
+                "f0f3e314e9d111f8"
+            ]
+        ]
+    },
+    {
+        "id": "c2af3567952dc598",
+        "type": "change",
+        "z": "1ceb83823bf626ce",
+        "name": "flow.MaxChargeCurrent",
+        "rules": [
+            {
+                "t": "set",
+                "p": "MaxChargeCurrent",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 950,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4aa1f4ab41f3db7e",
+        "type": "rbe",
+        "z": "1ceb83823bf626ce",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "topi": "topic",
+        "x": 730,
+        "y": 880,
+        "wires": [
+            [
+                "2dc1d934571b9bd2"
+            ]
+        ]
+    },
+    {
+        "id": "d343c3f0558215f9",
+        "type": "function",
+        "z": "1ceb83823bf626ce",
+        "name": "calculate max Discharge current",
+        "func": "let maxDischargeCurrent =200\n\nlet configuredMinCellV = 2.80\nlet configuredMaxCellV = 3.40\n\nlet configuredBankMinVoltage = 16 * configuredMinCellV\nlet configuredBankMaxVoltage = 16 * configuredMaxCellV\n\nlet bankVoltage = flow.get('Voltage')\n//let soc = flow.get('soc')\n\nlet minCellV1 = flow.get('minCellVoltage1')\nlet maxCellV1 = flow.get('maxCellVoltage1')\nlet minCellV2 = flow.get('minCellVoltage2')\nlet maxCellV2 = flow.get('maxCellVoltage2')\nlet minCellV = minCellV1 < minCellV2 ? minCellV1 : minCellV2\nlet maxCellV = maxCellV1 > maxCellV2 ? maxCellV1 : maxCellV2\n\n\n//bankVoltage > configuredBankMinVoltage && \nif(minCellV < configuredMinCellV){\n    node.warn('cell voltage to low, setting discharge current to zero')\n    \n    msg.payload = 0\n}\nelse{\n    msg.payload = maxDischargeCurrent\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 880,
+        "wires": [
+            [
+                "4aa1f4ab41f3db7e"
+            ]
+        ]
+    },
+    {
+        "id": "2dc1d934571b9bd2",
+        "type": "change",
+        "z": "1ceb83823bf626ce",
+        "name": "flow.MaxDischargeCurrent",
+        "rules": [
+            {
+                "t": "set",
+                "p": "MaxDischargeCurrent",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5d17457c95b5970b",
+        "type": "function",
+        "z": "1ceb83823bf626ce",
+        "name": "calculate power",
+        "func": "let bankVoltage = flow.get('Voltage')\nlet bankCurrent = flow.get('Current')\n\nmsg.payload = bankVoltage * bankCurrent\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 800,
+        "wires": [
+            [
+                "a1575f74df16d6e8"
+            ]
+        ]
+    },
+    {
+        "id": "a1575f74df16d6e8",
+        "type": "rbe",
+        "z": "1ceb83823bf626ce",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "topi": "topic",
+        "x": 730,
+        "y": 800,
+        "wires": [
+            [
+                "09716c3d6333d5d6"
+            ]
+        ]
+    },
+    {
+        "id": "09716c3d6333d5d6",
+        "type": "change",
+        "z": "1ceb83823bf626ce",
+        "name": "flow.Power",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Power",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 910,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    }
+]
