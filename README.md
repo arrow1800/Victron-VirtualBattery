@@ -61,20 +61,20 @@ As can be seen in the architecture image. The virtual battery driver itself send
 
 All properties (soc, voltage, etc) are stored in flow variables. when the battery driver sends a request to node-red, node-red retrieves all this variables and constructs a dictionary that is send back. this is done in the function block named: flow to dictionary
 
-setting other max discharge values for example can be done by changing the current function blocks that are connected to the 'every second trigger' or just add new ones. make sure the result always ends up in one of the following flow variables:
+setting other max discharge values for example can be done by changing the current function blocks that are connected to the 'every second trigger' or just add new ones. make sure the result always ends up in one of the following flow variable names:
 
 ```
-let k1 = 'Soc'
-let k2 = 'Current'
-let k3 = 'Voltage'
-let k4 = 'Power'
-let k5 = 'MinCellTemperature'
-let k6 = 'MaxCellTemperature'
-let k7 = 'MaxChargeCurrent'
-let k8 = 'MaxDischargeCurrent'
-let k9 = 'MaxChargeVoltage'
-let k10 = 'MaxCellVoltage'
-let k11 = 'MinCellVoltage'
+'Soc'
+'Current'
+'Voltage'
+'Power'
+'MinCellTemperature'
+'MaxCellTemperature'
+'MaxChargeCurrent'
+'MaxDischargeCurrent'
+'MaxChargeVoltage'
+'MaxCellVoltage'
+'MinCellVoltage'
 ```
 
 ### Defaults
