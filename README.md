@@ -1,6 +1,6 @@
 # Victron virtual battery
 
-this is a dbus service for the Victron venus OS. It is a virtual battery that doesn't do anything besides being available as a real battery in the venus OS. This is the only way to make sure that Venus OS and all its connected devices will honor the settings and information that this battery produces.
+this is a dbus service for the Victron venus OS. It is a virtual battery that doesn't do anything besides being available as a real battery in the venus OS. The rest of the logic is implemented with node-red and therefore easily changable. This is the only way to make sure that Venus OS and all its connected devices will honor the settings and information that this battery produces.
 
 The idea behind this is that when you have a virtual battery available in Venus OS it can be configured as the default battery. after that you are able to write any combination of data to it from any device (multiplusses, one or more BMS'es, smartshunts, etc.). When the information is stored in the virtual battery Venus OS will take care of the rest (making sure all chargers/devices receive the correct information and behave accordingly) 
 
