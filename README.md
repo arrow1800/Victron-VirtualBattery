@@ -68,8 +68,8 @@ setting other max discharge values for example can be done by changing the curre
 'Current'
 'Voltage'
 'Power'
-'MinCellTemperature'
-'MaxCellTemperature'
+'MinCellTemperature' -> not fully implemented yet, still needs work in node-red
+'MaxCellTemperature' -> not fully implemented yet, still needs work in node-red
 'MaxChargeCurrent'
 'MaxDischargeCurrent'
 'MaxChargeVoltage'
