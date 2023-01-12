@@ -8,9 +8,93 @@
         "env": []
     },
     {
+        "id": "9bf4e4631d68fc99",
+        "type": "group",
+        "z": "1ceb83823bf626ce",
+        "name": "This is the REST API. the virtual driver uses this to get the information from node-red",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "b6fbf18e126f214a",
+            "4663fcdf33eb8998",
+            "a72fda78e4d7d58f",
+            "1c0834172ad30edf",
+            "0e5b3ab2f54d1057"
+        ],
+        "x": 154,
+        "y": 1179,
+        "w": 652,
+        "h": 202
+    },
+    {
+        "id": "63e881f2502c39c4",
+        "type": "group",
+        "z": "1ceb83823bf626ce",
+        "name": "Place where you can modify the incoming stream of data before it goes to the virtual battery",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "feec784551f7da5e",
+            "f0f3e314e9d111f8",
+            "2c767dedb9794c94",
+            "c2af3567952dc598",
+            "4aa1f4ab41f3db7e",
+            "2dc1d934571b9bd2",
+            "5d17457c95b5970b",
+            "a1575f74df16d6e8",
+            "09716c3d6333d5d6",
+            "4afb44ae000e02af",
+            "5ce8a1baede77d3e",
+            "0630fd1cda4657cb",
+            "7c4da685b867180f",
+            "e83efff32ec9653f",
+            "ddd820525fcc55b3",
+            "1ba1c714fd86d385",
+            "6caf8c314a8f60c7"
+        ],
+        "x": 154,
+        "y": 739,
+        "w": 972,
+        "h": 342
+    },
+    {
+        "id": "222a409ae4cf9855",
+        "type": "group",
+        "z": "1ceb83823bf626ce",
+        "name": "Place where you can gather the necessary information you need for the virtual battery",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "1a2dd6c925eb721b",
+            "b3c0a538005709de",
+            "ad9f294e07431854",
+            "3f6acb6de37723eb",
+            "7dce6425b3d8dad5",
+            "6f75e576640949e1",
+            "e3a47a71878e85ae",
+            "641d0556e2c545c5",
+            "f7e59b7468c7cecf",
+            "a26d3cc9a9a9dbc5",
+            "7544dce1a0bc3094",
+            "d9757b79045821a8",
+            "d9f7de176d34f7a0",
+            "00dbff6cec95caf5",
+            "6f18100116a2bf8e",
+            "3d0161ec735e6767"
+        ],
+        "x": 134,
+        "y": 119,
+        "w": 732,
+        "h": 602
+    },
+    {
         "id": "1a2dd6c925eb721b",
         "type": "victron-input-battery",
         "z": "1ceb83823bf626ce",
+        "g": "222a409ae4cf9855",
         "service": "com.victronenergy.battery.ttyS5",
         "path": "/Dc/0/Current",
         "serviceObj": {
@@ -251,8 +335,8 @@
         },
         "initial": "",
         "name": "",
-        "x": 390,
-        "y": 140,
+        "x": 310,
+        "y": 160,
         "wires": [
             [
                 "ad9f294e07431854"
@@ -263,6 +347,7 @@
         "id": "b3c0a538005709de",
         "type": "victron-input-battery",
         "z": "1ceb83823bf626ce",
+        "g": "222a409ae4cf9855",
         "service": "com.victronenergy.battery.ttyS5",
         "path": "/Soc",
         "serviceObj": {
@@ -503,8 +588,8 @@
         },
         "initial": "",
         "name": "",
-        "x": 410,
-        "y": 200,
+        "x": 330,
+        "y": 220,
         "wires": [
             [
                 "3f6acb6de37723eb"
@@ -515,6 +600,7 @@
         "id": "ad9f294e07431854",
         "type": "change",
         "z": "1ceb83823bf626ce",
+        "g": "222a409ae4cf9855",
         "name": "flow.current",
         "rules": [
             {
@@ -530,8 +616,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 690,
-        "y": 140,
+        "x": 610,
+        "y": 160,
         "wires": [
             []
         ]
@@ -540,6 +626,7 @@
         "id": "3f6acb6de37723eb",
         "type": "change",
         "z": "1ceb83823bf626ce",
+        "g": "222a409ae4cf9855",
         "name": "flow.soc",
         "rules": [
             {
@@ -555,8 +642,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 680,
-        "y": 200,
+        "x": 600,
+        "y": 220,
         "wires": [
             []
         ]
@@ -565,13 +652,14 @@
         "id": "b6fbf18e126f214a",
         "type": "http in",
         "z": "1ceb83823bf626ce",
+        "g": "9bf4e4631d68fc99",
         "name": "",
         "url": "/virtualbattery",
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 150,
-        "y": 1100,
+        "x": 270,
+        "y": 1280,
         "wires": [
             [
                 "a72fda78e4d7d58f"
@@ -582,17 +670,19 @@
         "id": "4663fcdf33eb8998",
         "type": "http response",
         "z": "1ceb83823bf626ce",
+        "g": "9bf4e4631d68fc99",
         "name": "",
         "statusCode": "200",
         "headers": {},
-        "x": 580,
-        "y": 1100,
+        "x": 700,
+        "y": 1280,
         "wires": []
     },
     {
         "id": "a72fda78e4d7d58f",
         "type": "function",
         "z": "1ceb83823bf626ce",
+        "g": "9bf4e4631d68fc99",
         "name": "flow to dictionary",
         "func": "\n\nlet k1 = 'Soc'\nlet k2 = 'Current'\nlet k3 = 'Voltage'\nlet k4 = 'Power'\nlet k5 = 'MinCellTemperature'\nlet k6 = 'MaxCellTemperature'\nlet k7 = 'MaxChargeCurrent'\nlet k8 = 'MaxDischargeCurrent'\nlet k9 = 'MaxChargeVoltage'\nlet k10 = 'MaxCellVoltage'\nlet k11 = 'MinCellVoltage'\n\nlet arr = [k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11]\n\n\nlet payload = {}\nfor(let i in arr){\n    let v = flow.get(arr[i]) ?? 0;\n    \n    payload[arr[i]] = v\n}\n\nmsg.payload = payload\nreturn msg;",
         "outputs": 1,
@@ -600,8 +690,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 410,
-        "y": 1100,
+        "x": 530,
+        "y": 1280,
         "wires": [
             [
                 "4663fcdf33eb8998"
@@ -612,6 +702,7 @@
         "id": "1c0834172ad30edf",
         "type": "debug",
         "z": "1ceb83823bf626ce",
+        "g": "9bf4e4631d68fc99",
         "name": "debug 13",
         "active": true,
         "tosidebar": true,
@@ -621,14 +712,15 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 580,
-        "y": 1160,
+        "x": 700,
+        "y": 1340,
         "wires": []
     },
     {
         "id": "7dce6425b3d8dad5",
         "type": "victron-input-battery",
         "z": "1ceb83823bf626ce",
+        "g": "222a409ae4cf9855",
         "service": "com.victronenergy.battery.ttyS5",
         "path": "/Dc/0/Voltage",
         "serviceObj": {
@@ -869,8 +961,8 @@
         },
         "initial": "",
         "name": "",
-        "x": 390,
-        "y": 260,
+        "x": 310,
+        "y": 280,
         "wires": [
             [
                 "6f75e576640949e1"
@@ -881,6 +973,7 @@
         "id": "6f75e576640949e1",
         "type": "change",
         "z": "1ceb83823bf626ce",
+        "g": "222a409ae4cf9855",
         "name": "flow.voltage",
         "rules": [
             {
@@ -896,62 +989,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 690,
-        "y": 260,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "29c9c5660bea12a9",
-        "type": "inject",
-        "z": "1ceb83823bf626ce",
-        "name": "on startup",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 450,
-        "y": 40,
-        "wires": [
-            [
-                "57596cea29c057c4"
-            ]
-        ]
-    },
-    {
-        "id": "57596cea29c057c4",
-        "type": "change",
-        "z": "1ceb83823bf626ce",
-        "name": "set defaults",
-        "rules": [
-            {
-                "t": "set",
-                "p": "MaxChargeVoltage",
-                "pt": "flow",
-                "to": "54.40",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 690,
-        "y": 40,
+        "x": 610,
+        "y": 280,
         "wires": [
             []
         ]
@@ -960,16 +999,18 @@
         "id": "0e5b3ab2f54d1057",
         "type": "comment",
         "z": "1ceb83823bf626ce",
+        "g": "9bf4e4631d68fc99",
         "name": "README / HTTP endpoint for driver",
         "info": "this is the HTTP rest endpoint that is used by the virtual battery driver in venus os. when it receives a request it sends a response with all the settings for the virtual battery. that is then being processed by the driver",
-        "x": 240,
-        "y": 1040,
+        "x": 360,
+        "y": 1220,
         "wires": []
     },
     {
         "id": "e3a47a71878e85ae",
         "type": "victron-input-battery",
         "z": "1ceb83823bf626ce",
+        "g": "222a409ae4cf9855",
         "service": "com.victronenergy.battery.ttyUSB2",
         "path": "/System/MinCellVoltage",
         "serviceObj": {
@@ -1252,8 +1293,8 @@
         },
         "initial": "",
         "name": "",
-        "x": 300,
-        "y": 440,
+        "x": 380,
+        "y": 460,
         "wires": [
             [
                 "641d0556e2c545c5"
@@ -1264,6 +1305,7 @@
         "id": "641d0556e2c545c5",
         "type": "change",
         "z": "1ceb83823bf626ce",
+        "g": "222a409ae4cf9855",
         "name": "flow.minCellVoltage1",
         "rules": [
             {
@@ -1279,8 +1321,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 660,
-        "y": 440,
+        "x": 740,
+        "y": 460,
         "wires": [
             []
         ]
@@ -1289,6 +1331,7 @@
         "id": "f7e59b7468c7cecf",
         "type": "change",
         "z": "1ceb83823bf626ce",
+        "g": "222a409ae4cf9855",
         "name": "flow.maxCellVoltage1",
         "rules": [
             {
@@ -1304,8 +1347,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 660,
-        "y": 500,
+        "x": 740,
+        "y": 520,
         "wires": [
             []
         ]
@@ -1314,6 +1357,7 @@
         "id": "a26d3cc9a9a9dbc5",
         "type": "victron-input-battery",
         "z": "1ceb83823bf626ce",
+        "g": "222a409ae4cf9855",
         "service": "com.victronenergy.battery.ttyUSB2",
         "path": "/System/MaxCellVoltage",
         "serviceObj": {
@@ -1596,8 +1640,8 @@
         },
         "initial": "",
         "name": "",
-        "x": 300,
-        "y": 500,
+        "x": 380,
+        "y": 520,
         "wires": [
             [
                 "f7e59b7468c7cecf"
@@ -1608,6 +1652,7 @@
         "id": "7544dce1a0bc3094",
         "type": "victron-input-battery",
         "z": "1ceb83823bf626ce",
+        "g": "222a409ae4cf9855",
         "service": "com.victronenergy.battery.ttyUSB0",
         "path": "/System/MinCellVoltage",
         "serviceObj": {
@@ -1890,8 +1935,8 @@
         },
         "initial": "",
         "name": "",
-        "x": 300,
-        "y": 600,
+        "x": 380,
+        "y": 620,
         "wires": [
             [
                 "d9757b79045821a8"
@@ -1902,6 +1947,7 @@
         "id": "d9757b79045821a8",
         "type": "change",
         "z": "1ceb83823bf626ce",
+        "g": "222a409ae4cf9855",
         "name": "flow.minCellVoltage2",
         "rules": [
             {
@@ -1917,8 +1963,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 660,
-        "y": 600,
+        "x": 740,
+        "y": 620,
         "wires": [
             []
         ]
@@ -1927,6 +1973,7 @@
         "id": "d9f7de176d34f7a0",
         "type": "change",
         "z": "1ceb83823bf626ce",
+        "g": "222a409ae4cf9855",
         "name": "flow.maxCellVoltage2",
         "rules": [
             {
@@ -1942,8 +1989,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 660,
-        "y": 660,
+        "x": 740,
+        "y": 680,
         "wires": [
             []
         ]
@@ -1952,6 +1999,7 @@
         "id": "00dbff6cec95caf5",
         "type": "victron-input-battery",
         "z": "1ceb83823bf626ce",
+        "g": "222a409ae4cf9855",
         "service": "com.victronenergy.battery.ttyUSB0",
         "path": "/System/MaxCellVoltage",
         "serviceObj": {
@@ -2234,8 +2282,8 @@
         },
         "initial": "",
         "name": "",
-        "x": 300,
-        "y": 660,
+        "x": 380,
+        "y": 680,
         "wires": [
             [
                 "d9f7de176d34f7a0"
@@ -2246,26 +2294,29 @@
         "id": "6f18100116a2bf8e",
         "type": "comment",
         "z": "1ceb83823bf626ce",
+        "g": "222a409ae4cf9855",
         "name": "First battery with BMS",
         "info": "",
-        "x": 180,
-        "y": 380,
+        "x": 260,
+        "y": 400,
         "wires": []
     },
     {
         "id": "3d0161ec735e6767",
         "type": "comment",
         "z": "1ceb83823bf626ce",
+        "g": "222a409ae4cf9855",
         "name": "Second battery with BMS",
         "info": "",
-        "x": 190,
-        "y": 560,
+        "x": 270,
+        "y": 580,
         "wires": []
     },
     {
         "id": "feec784551f7da5e",
         "type": "inject",
         "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
         "name": "every sec",
         "props": [
             {
@@ -2283,13 +2334,14 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 250,
-        "y": 840,
+        "x": 270,
+        "y": 900,
         "wires": [
             [
                 "2c767dedb9794c94",
-                "d343c3f0558215f9",
-                "5d17457c95b5970b"
+                "5d17457c95b5970b",
+                "4afb44ae000e02af",
+                "ddd820525fcc55b3"
             ]
         ]
     },
@@ -2297,19 +2349,20 @@
         "id": "f0f3e314e9d111f8",
         "type": "rbe",
         "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
         "name": "",
         "func": "rbe",
         "gap": "",
         "start": "",
         "inout": "out",
         "septopics": false,
-        "property": "payload",
+        "property": "maxDischargeCurrent",
         "topi": "topic",
-        "x": 730,
-        "y": 840,
+        "x": 750,
+        "y": 1000,
         "wires": [
             [
-                "c2af3567952dc598"
+                "2dc1d934571b9bd2"
             ]
         ]
     },
@@ -2317,18 +2370,20 @@
         "id": "2c767dedb9794c94",
         "type": "function",
         "z": "1ceb83823bf626ce",
-        "name": "calculate max charge current",
-        "func": "let maxchargeCurrent = 200\n\nlet configuredMinCellV = 2.80\nlet configuredMaxCellV = 3.40\n\nlet configuredBankMinVoltage = 16 * configuredMinCellV\nlet configuredBankMaxVoltage = 16 * configuredMaxCellV\n\nlet bankVoltage = flow.get('Voltage')\n//let soc = flow.get('soc')\n\nlet minCellV1 = flow.get('minCellVoltage1')\nlet maxCellV1 = flow.get('maxCellVoltage1')\nlet minCellV2 = flow.get('minCellVoltage2')\nlet maxCellV2 = flow.get('maxCellVoltage2')\nlet minCellV = minCellV1 < minCellV2 ? minCellV1 : minCellV2\nlet maxCellV = maxCellV1 > maxCellV2 ? maxCellV1 : maxCellV2\n\n\n//TODO work with soc\n//bankVoltage < configuredBankMaxVoltage && \nif(maxCellV > configuredMaxCellV){\n    node.warn('cell voltage to high, setting charge current to zero')\n\n    msg.payload = 0\n}\nelse{\n    msg.payload = maxchargeCurrent\n}\n\nreturn msg;",
+        "g": "63e881f2502c39c4",
+        "name": "calculate max (dis)charge current",
+        "func": "//configured max charge and discharge values for whole bank\nlet maxChargeCurrent = 200\nlet maxDischargeCurrent = 200\n\n//configured min and max cell values\nlet configuredMinCellV = 2.80\nlet configuredMaxCellV = 3.40\n\nlet configuredBankMinVoltage = 16 * configuredMinCellV\nlet configuredBankMaxVoltage = 16 * configuredMaxCellV\n\n//getting current measured values\nlet bankVoltage = flow.get('Voltage')\nlet soc = flow.get('Soc')\n\nlet minCellV = flow.get('MinCellVoltage')\nlet maxCellV = flow.get('MaxCellVoltage')\n\n//TODO work with soc\n//bankVoltage < configuredBankMaxVoltage && \nif(maxCellV > configuredMaxCellV){\n    node.warn('cell voltage to high, setting charge current to zero')\n\n    msg.maxChargeCurrent = 0\n}\nelse{\n    msg.maxChargeCurrent = maxChargeCurrent\n}\n\n//bankVoltage > configuredBankMinVoltage && \nif(minCellV < configuredMinCellV){\n    node.warn('cell voltage to low, setting discharge current to zero')\n    \n    msg.maxDischargeCurrent = 0\n}\nelse{\n    msg.maxDischargeCurrent = maxDischargeCurrent\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 500,
-        "y": 840,
+        "x": 540,
+        "y": 1000,
         "wires": [
             [
-                "f0f3e314e9d111f8"
+                "f0f3e314e9d111f8",
+                "4aa1f4ab41f3db7e"
             ]
         ]
     },
@@ -2336,13 +2391,14 @@
         "id": "c2af3567952dc598",
         "type": "change",
         "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
         "name": "flow.MaxChargeCurrent",
         "rules": [
             {
                 "t": "set",
                 "p": "MaxChargeCurrent",
                 "pt": "flow",
-                "to": "payload",
+                "to": "maxChargeCurrent",
                 "tot": "msg"
             }
         ],
@@ -2351,8 +2407,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 950,
-        "y": 840,
+        "x": 970,
+        "y": 1040,
         "wires": [
             []
         ]
@@ -2361,38 +2417,20 @@
         "id": "4aa1f4ab41f3db7e",
         "type": "rbe",
         "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
         "name": "",
         "func": "rbe",
         "gap": "",
         "start": "",
         "inout": "out",
         "septopics": false,
-        "property": "payload",
+        "property": "maxChargeCurrent",
         "topi": "topic",
-        "x": 730,
-        "y": 880,
+        "x": 750,
+        "y": 1040,
         "wires": [
             [
-                "2dc1d934571b9bd2"
-            ]
-        ]
-    },
-    {
-        "id": "d343c3f0558215f9",
-        "type": "function",
-        "z": "1ceb83823bf626ce",
-        "name": "calculate max Discharge current",
-        "func": "let maxDischargeCurrent =200\n\nlet configuredMinCellV = 2.80\nlet configuredMaxCellV = 3.40\n\nlet configuredBankMinVoltage = 16 * configuredMinCellV\nlet configuredBankMaxVoltage = 16 * configuredMaxCellV\n\nlet bankVoltage = flow.get('Voltage')\n//let soc = flow.get('soc')\n\nlet minCellV1 = flow.get('minCellVoltage1')\nlet maxCellV1 = flow.get('maxCellVoltage1')\nlet minCellV2 = flow.get('minCellVoltage2')\nlet maxCellV2 = flow.get('maxCellVoltage2')\nlet minCellV = minCellV1 < minCellV2 ? minCellV1 : minCellV2\nlet maxCellV = maxCellV1 > maxCellV2 ? maxCellV1 : maxCellV2\n\n\n//bankVoltage > configuredBankMinVoltage && \nif(minCellV < configuredMinCellV){\n    node.warn('cell voltage to low, setting discharge current to zero')\n    \n    msg.payload = 0\n}\nelse{\n    msg.payload = maxDischargeCurrent\n}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 510,
-        "y": 880,
-        "wires": [
-            [
-                "4aa1f4ab41f3db7e"
+                "c2af3567952dc598"
             ]
         ]
     },
@@ -2400,13 +2438,14 @@
         "id": "2dc1d934571b9bd2",
         "type": "change",
         "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
         "name": "flow.MaxDischargeCurrent",
         "rules": [
             {
                 "t": "set",
                 "p": "MaxDischargeCurrent",
                 "pt": "flow",
-                "to": "payload",
+                "to": "maxDischargeCurrent",
                 "tot": "msg"
             }
         ],
@@ -2415,8 +2454,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 960,
-        "y": 880,
+        "x": 980,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -2425,6 +2464,7 @@
         "id": "5d17457c95b5970b",
         "type": "function",
         "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
         "name": "calculate power",
         "func": "let bankVoltage = flow.get('Voltage')\nlet bankCurrent = flow.get('Current')\n\nmsg.payload = bankVoltage * bankCurrent\n\nreturn msg;",
         "outputs": 1,
@@ -2432,8 +2472,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 460,
-        "y": 800,
+        "x": 480,
+        "y": 960,
         "wires": [
             [
                 "a1575f74df16d6e8"
@@ -2444,6 +2484,7 @@
         "id": "a1575f74df16d6e8",
         "type": "rbe",
         "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
         "name": "",
         "func": "rbe",
         "gap": "",
@@ -2452,8 +2493,8 @@
         "septopics": false,
         "property": "payload",
         "topi": "topic",
-        "x": 730,
-        "y": 800,
+        "x": 750,
+        "y": 960,
         "wires": [
             [
                 "09716c3d6333d5d6"
@@ -2464,6 +2505,7 @@
         "id": "09716c3d6333d5d6",
         "type": "change",
         "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
         "name": "flow.Power",
         "rules": [
             {
@@ -2479,8 +2521,190 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 910,
-        "y": 800,
+        "x": 930,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4afb44ae000e02af",
+        "type": "function",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "calculate min/max cell voltage",
+        "func": "let minCellV1 = flow.get('minCellVoltage1')\nlet maxCellV1 = flow.get('maxCellVoltage1')\nlet minCellV2 = flow.get('minCellVoltage2')\nlet maxCellV2 = flow.get('maxCellVoltage2')\nlet minCellV = minCellV1 < minCellV2 ? minCellV1 : minCellV2\nlet maxCellV = maxCellV1 > maxCellV2 ? maxCellV1 : maxCellV2\n\n\nmsg.mincellv = minCellV\nmsg.maxcellv = maxCellV\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 820,
+        "wires": [
+            [
+                "5ce8a1baede77d3e",
+                "7c4da685b867180f"
+            ]
+        ]
+    },
+    {
+        "id": "5ce8a1baede77d3e",
+        "type": "rbe",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "mincellv",
+        "topi": "topic",
+        "x": 750,
+        "y": 820,
+        "wires": [
+            [
+                "0630fd1cda4657cb"
+            ]
+        ]
+    },
+    {
+        "id": "0630fd1cda4657cb",
+        "type": "change",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "flow.MinCellVoltage",
+        "rules": [
+            {
+                "t": "set",
+                "p": "MinCellVoltage",
+                "pt": "flow",
+                "to": "mincellv",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 950,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7c4da685b867180f",
+        "type": "rbe",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "maxcellv",
+        "topi": "topic",
+        "x": 750,
+        "y": 780,
+        "wires": [
+            [
+                "e83efff32ec9653f"
+            ]
+        ]
+    },
+    {
+        "id": "e83efff32ec9653f",
+        "type": "change",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "flow.MaxCellVoltage",
+        "rules": [
+            {
+                "t": "set",
+                "p": "MaxCellVoltage",
+                "pt": "flow",
+                "to": "maxcellv",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ddd820525fcc55b3",
+        "type": "function",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "calculate maxChargeVoltage",
+        "func": "\nmsg.payload = 54.40\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 920,
+        "wires": [
+            [
+                "1ba1c714fd86d385"
+            ]
+        ]
+    },
+    {
+        "id": "1ba1c714fd86d385",
+        "type": "rbe",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "topi": "topic",
+        "x": 750,
+        "y": 920,
+        "wires": [
+            [
+                "6caf8c314a8f60c7"
+            ]
+        ]
+    },
+    {
+        "id": "6caf8c314a8f60c7",
+        "type": "change",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "flow.MaxChargeVoltage",
+        "rules": [
+            {
+                "t": "set",
+                "p": "MaxChargeVoltage",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 920,
         "wires": [
             []
         ]
