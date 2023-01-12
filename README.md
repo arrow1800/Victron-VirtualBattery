@@ -45,6 +45,38 @@ Installation:
 
 The service now starts automatically after a start/restart of the Venus OS
 
+## Architecture
+
+![virtual battery architecture](https://github.com/arrow1800/Victron-VirtualBattery/blob/main/img/architecture.png)
+
+### Reading data
+
+Reading data is done from within node-red. the most easiest way is using the default blue victron module nodes. 
+
+### Sending data 
+
+As can be seen in the architecture image. The virtual battery driver itself sends requests to a running REST api in node-red. Node-red replies with a response (including all virtual battery settings) which is then processed by the virtual battery itself (python file)
+
+### Changing data
+
+All properties (soc, voltage, etc) are stored in flow variables. when the battery driver sends a request to node-red, node-red retrieves all this variables and constructs a dictionary that is send back. this is done in the function block named: flow to dictionary
+
+setting other max discharge values for example can be done by changing the current function blocks that are connected to the 'every second trigger' or just add new ones. make sure the result always ends up in one of the following flow variables:
+
+```
+let k1 = 'Soc'
+let k2 = 'Current'
+let k3 = 'Voltage'
+let k4 = 'Power'
+let k5 = 'MinCellTemperature'
+let k6 = 'MaxCellTemperature'
+let k7 = 'MaxChargeCurrent'
+let k8 = 'MaxDischargeCurrent'
+let k9 = 'MaxChargeVoltage'
+let k10 = 'MaxCellVoltage'
+let k11 = 'MinCellVoltage'
+```
+
 ### Defaults
 
 All default values can be changed from within the node-red ui. 
