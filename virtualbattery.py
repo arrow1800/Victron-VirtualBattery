@@ -9,6 +9,9 @@ import time as tt                           # for charge measurement
 import requests
 import json
 
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
 sys.path.append('/opt/victronenergy/dbus-systemcalc-py/ext/velib_python')
 from vedbus import VeDbusService #, VeDbusItemImport
 
@@ -86,8 +89,8 @@ class DbusVirtualBatService(object):
             
             with self._dbusservice as bus:
             
-                bus['/Dc/0/Voltage'] = round(json['Voltage'], 1)
-                bus['/Dc/0/Current'] = round(json['Current'], 1)
+                bus['/Dc/0/Voltage'] = round(json['Voltage'], 2)
+                bus['/Dc/0/Current'] = round(json['Current'], 2)
                 bus['/Dc/0/Power'] = round(json['Power'], 0)
             
                 bus['/Soc'] = json['Soc']
