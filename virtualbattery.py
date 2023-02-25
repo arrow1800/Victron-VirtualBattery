@@ -86,6 +86,8 @@ class DbusVirtualBatService(object):
             r = requests.get('https://localhost:1881/virtualbattery', verify=False)
 
             json = r.json()
+
+            #logging.info(f'{dt.now()} data received: {json}')
             
             with self._dbusservice as bus:
             
@@ -129,9 +131,9 @@ class DbusVirtualBatService(object):
                 bus['/Info/MaxChargeCurrent'] = json['MaxChargeCurrent']
                 bus['/Info/MaxDischargeCurrent'] = json['MaxDischargeCurrent']
                 bus['/Info/MaxChargeVoltage'] = json['MaxChargeVoltage']
-        except:
-            logging.info(f'{dt.now()} error occurred during update, retrying..')
-            GLib.timeout_add(5000, self._update) 
+        except Exception as e:
+            logging.info(f'{dt.now()}:{e}, error occurred during update, retrying..')
+            #GLib.timeout_add(5000, self._update) 
 
         return True
     
