@@ -1,3 +1,0 @@
-#!/bin/bash
-kill $(pgrep -f 'python3 /data/dbus-virtual-battery/virtualbattery.py')
-
