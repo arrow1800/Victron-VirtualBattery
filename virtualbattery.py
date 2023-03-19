@@ -139,6 +139,7 @@ class DbusVirtualBatService(object):
                 bus['/Alarms/InternalFailure'] = 2
                 bus['/Info/MaxChargeCurrent'] = 0
                 bus['/Info/MaxDischargeCurrent'] = 0
+                bus['/Info/MaxChargeVoltage'] = 53.6
             #GLib.timeout_add(5000, self._update) 
 
         return True
