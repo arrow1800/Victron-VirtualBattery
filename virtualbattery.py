@@ -92,11 +92,11 @@ class DbusVirtualBatService(object):
 
             with self._dbusservice as bus:
             
-                bus['/Dc/0/Voltage'] = round(json['Voltage'], 2)
-                bus['/Dc/0/Current'] = round(json['Current'], 2)
-                bus['/Dc/0/Power'] = round(json['Power'], 0)
+                bus['/Dc/0/Voltage'] = round(json.get('Voltage'), 2)
+                bus['/Dc/0/Current'] = round(json.get('Current'), 2)
+                bus['/Dc/0/Power'] = round(json.get('Power'), 0)
             
-                bus['/Soc'] = json['Soc']
+                bus['/Soc'] = json.get('Soc')
                 # bus['/Capacity'] = Capacity
                 # bus['/InstalledCapacity'] = InstalledCapacity
                 # bus['/ConsumedAmphours'] = ConsumedAmphours
@@ -130,16 +130,16 @@ class DbusVirtualBatService(object):
                 # bus['/Alarms/HighTemperature'] = HighChargeTemperature_alarm
                 # bus['/Alarms/LowTemperature'] = LowChargeTemperature_alarm
             
-                bus['/Info/MaxChargeCurrent'] = json['MaxChargeCurrent']
-                bus['/Info/MaxDischargeCurrent'] = json['MaxDischargeCurrent']
-                bus['/Info/MaxChargeVoltage'] = json['MaxChargeVoltage']
+                bus['/Info/MaxChargeCurrent'] = json.get('MaxChargeCurrent')
+                bus['/Info/MaxDischargeCurrent'] = json.get('MaxDischargeCurrent')
+                bus['/Info/MaxChargeVoltage'] = json.get('MaxChargeVoltage')
         except Exception as e:
             logging.info(f'{dt.now()}:{e}, error occurred during update, retrying..')
             with self._dbusservice as bus:
                 bus['/Alarms/InternalFailure'] = 2
                 bus['/Info/MaxChargeCurrent'] = 0
                 bus['/Info/MaxDischargeCurrent'] = 0
-                bus['/Info/MaxChargeVoltage'] = 53.6
+                bus['/Info/MaxChargeVoltage'] = 54.4
             #GLib.timeout_add(5000, self._update) 
 
         return True
