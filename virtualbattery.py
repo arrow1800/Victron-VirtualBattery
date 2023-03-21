@@ -52,7 +52,7 @@ class DbusVirtualBatService(object):
         # self._dbusservice.add_path('/System/NrOfCellsPerBattery', None, writeable=True)
         # self._dbusservice.add_path('/System/NrOfModulesOnline', None, writeable=True)
         # self._dbusservice.add_path('/System/NrOfModulesOffline', None, writeable=True)
-        self._dbusservice.add_path('/System/NrOfModulesBlockingCharge', None, writeable=True)
+        # self._dbusservice.add_path('/System/NrOfModulesBlockingCharge', None, writeable=True)
         # self._dbusservice.add_path('/System/NrOfModulesBlockingDischarge', None, writeable=True)         
         
         # Create alarm paths
@@ -113,7 +113,7 @@ class DbusVirtualBatService(object):
                 # bus['/System/NrOfCellsPerBattery'] = NrOfCellsPerBattery
                 # bus['/System/NrOfModulesOnline'] = NrOfModulesOnline
                 # bus['/System/NrOfModulesOffline'] = NrOfModulesOffline
-                bus['/System/NrOfModulesBlockingCharge'] = json.get('ModulesBlockingCharge')
+                # bus['/System/NrOfModulesBlockingCharge'] = json.get('ModulesBlockingCharge')
                 # bus['/System/NrOfModulesBlockingDischarge'] = NrOfModulesBlockingDischarge
             
                 # bus['/Alarms/LowVoltage'] = LowVoltage_alarm
