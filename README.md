@@ -39,8 +39,9 @@ see file exampleflow.json you can copy the contents to node-red and import it al
 Installation:
 - create /data/dbus-virtual-battery directory
 - copy files to this folder
-- set chmod 744 for ./service/run and ./restart
-- add this line to the file /data/rc.local : ln -s /data/dbus-virtual-battery/service /service/dbus-virtual-battery 
+- chmod a+x /data/dbus-virtual-battery/install.sh
+- ./data/dbus-virtual-battery/install.sh
+
 
 
 The service now starts automatically after a start/restart of the Venus OS

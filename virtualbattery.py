@@ -63,7 +63,7 @@ class DbusVirtualBatService(object):
         # self._dbusservice.add_path('/Alarms/HighChargeCurrent', None, writeable=True)
         # self._dbusservice.add_path('/Alarms/HighDischargeCurrent', None, writeable=True)
         # self._dbusservice.add_path('/Alarms/CellImbalance', None, writeable=True)
-        # self._dbusservice.add_path('/Alarms/InternalFailure', None, writeable=True)
+        self._dbusservice.add_path('/Alarms/InternalFailure', None, writeable=True)
         # self._dbusservice.add_path('/Alarms/HighChargeTemperature', None, writeable=True)
         # self._dbusservice.add_path('/Alarms/LowChargeTemperature', None, writeable=True)
         # self._dbusservice.add_path('/Alarms/HighTemperature', None, writeable=True)
@@ -88,7 +88,8 @@ class DbusVirtualBatService(object):
             json = r.json()
 
             #logging.info(f'{dt.now()} data received: {json}')
-            
+            self._internalFailure = 0
+
             with self._dbusservice as bus:
             
                 bus['/Dc/0/Voltage'] = round(json['Voltage'], 2)
@@ -101,18 +102,18 @@ class DbusVirtualBatService(object):
                 # bus['/ConsumedAmphours'] = ConsumedAmphours
             
                 # bus['/Dc/0/Temperature'] = Temperature
-                bus['/System/MaxCellTemperature'] = json['MaxCellTemperature']
-                bus['/System/MinCellTemperature'] = json['MinCellTemperature']
+                bus['/System/MaxCellTemperature'] = json.get('MaxCellTemperature')
+                bus['/System/MinCellTemperature'] = json.get('MinCellTemperature')
             
-                bus['/System/MaxCellVoltage'] = json['MaxCellVoltage']
+                bus['/System/MaxCellVoltage'] = json.get('MaxCellVoltage')
                 # bus['/System/MaxVoltageCellId'] = MaxVoltageCellId
-                bus['/System/MinCellVoltage'] = json['MinCellVoltage']
+                bus['/System/MinCellVoltage'] = json.get('MinCellVoltage')
                 # bus['/System/MinVoltageCellId'] = MinVoltageCellId
             
                 # bus['/System/NrOfCellsPerBattery'] = NrOfCellsPerBattery
                 # bus['/System/NrOfModulesOnline'] = NrOfModulesOnline
                 # bus['/System/NrOfModulesOffline'] = NrOfModulesOffline
-                bus['/System/NrOfModulesBlockingCharge'] = json['ModulesBlockingCharge']
+                bus['/System/NrOfModulesBlockingCharge'] = json.get('ModulesBlockingCharge')
                 # bus['/System/NrOfModulesBlockingDischarge'] = NrOfModulesBlockingDischarge
             
                 # bus['/Alarms/LowVoltage'] = LowVoltage_alarm
@@ -122,7 +123,8 @@ class DbusVirtualBatService(object):
                 # bus['/Alarms/HighChargeCurrent'] = HighChargeCurrent_alarm
                 # bus['/Alarms/HighDischargeCurrent'] = HighDischargeCurrent_alarm
                 # bus['/Alarms/CellImbalance'] = CellImbalance_alarm
-                # bus['/Alarms/InternalFailure'] = InternalFailure_alarm
+                bus['/Alarms/InternalFailure'] = 0
+                
                 # bus['/Alarms/HighChargeTemperature'] = HighChargeTemperature_alarm
                 # bus['/Alarms/LowChargeTemperature'] = LowChargeTemperature_alarm
                 # bus['/Alarms/HighTemperature'] = HighChargeTemperature_alarm
@@ -133,6 +135,11 @@ class DbusVirtualBatService(object):
                 bus['/Info/MaxChargeVoltage'] = json['MaxChargeVoltage']
         except Exception as e:
             logging.info(f'{dt.now()}:{e}, error occurred during update, retrying..')
+            with self._dbusservice as bus:
+                bus['/Alarms/InternalFailure'] = 2
+                bus['/Info/MaxChargeCurrent'] = 0
+                bus['/Info/MaxDischargeCurrent'] = 0
+                bus['/Info/MaxChargeVoltage'] = 53.6
             #GLib.timeout_add(5000, self._update) 
 
         return True
