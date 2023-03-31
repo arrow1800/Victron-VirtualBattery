@@ -3,27 +3,26 @@ import logging
 import sys
 import os
 import dbus
-# from settings import *
 from datetime import datetime as dt         # for UTC time stamps for logging
-import time as tt                           # for charge measurement
+import time                                 # for charge measurement
 import requests
 import json
-
-import urllib3
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+from mqttclient import VictronMQTTClient
 
 sys.path.append('/opt/victronenergy/dbus-systemcalc-py/ext/velib_python')
 from vedbus import VeDbusService #, VeDbusItemImport
 
 class DbusVirtualBatService(object):
+
+    lastMessage = time.time()
     
-    def __init__(self, servicename='com.victronenergy.battery.virtual'):
+    def __init__(self, servicename='com.victronenergy.battery.virtual.test'):
         self._dbusservice = VeDbusService(servicename)
         self._dbusConn = dbus.SessionBus()  if 'DBUS_SESSION_BUS_ADDRESS' in os.environ else dbus.SystemBus()
         
         # Create the mandatory objects
         self._dbusservice.add_mandatory_paths(processname = __file__, processversion = '0.0', connection = 'Virtual',
-			deviceinstance = 15, productid = 0, productname = 'VirtualBattery', firmwareversion = 0.1, 
+			deviceinstance = 17, productid = 0, productname = 'VirtualBattery', firmwareversion = 0.1, 
             hardwareversion = '0.0', connected = 1)
 
         # Create DC paths        
@@ -75,45 +74,76 @@ class DbusVirtualBatService(object):
         self._dbusservice.add_path('/Info/MaxDischargeCurrent', None, writeable=True, gettextcallback=lambda a, x: "{:.0f}A".format(x))
         self._dbusservice.add_path('/Info/MaxChargeVoltage', None, writeable=True, gettextcallback=lambda a, x: "{:.1f}V".format(x))
 
-        GLib.timeout_add(1000, self._update)    
+    def checkLastMessage(self):
+        if (time.time() - self.lastMessage > 60):
+            logging.info(
+                f'{dt.now()} Timeout on MQTT message. Setting failsafe...')
+            print(f'{dt.now()} Timeout on MQTT message. Setting failsafe...')
+            self.setFailsafeSettings()
+        return True
     
-    
-    def _update(self):  
+    def setFailsafeSettings(self):
+        '''construct custom json obj
+        call update manually
+        '''
+        data = []
+        data['Voltage'] = 53.8
+        data['Current'] = 0
+        data['Power'] = 0
+        data['Soc'] = 0
+        data['MaxCellTemperature'] = 0
+        data['MinCellTemperature'] = 0
+        data['MaxCellVoltage'] = 3.65
+        data['MinCellVoltage'] = 3.65 #change later on
+        data['InternalFailure'] = 1
+        data['MaxChargeCurrent'] = 0
+        data['MaxDischargeCurrent'] = 200 #change later on
+        data['MaxChargeVoltage'] = 53.8
 
+        self._update(data)
+
+
+
+
+    def callback(self, client, userdata, msg):
+        print(f"Received `{msg.payload.decode()}` from `{msg.topic}` topic")
+        data = json.loads(msg.payload)
+
+        #in case we receive data we set this to 0
+        data['InternalFailure'] = 0
+
+        self._update(data)     
+    
+    def _update(self, data):  
         
         try:
-            
-            r = requests.get('https://localhost:1881/virtualbattery', verify=False)
 
-            json = r.json()
-
-            #logging.info(f'{dt.now()} data received: {json}')
-            self._internalFailure = 0
+            logging.info(f'received data: {data}')
 
             with self._dbusservice as bus:
             
-                bus['/Dc/0/Voltage'] = round(json.get('Voltage'), 2)
-                bus['/Dc/0/Current'] = round(json.get('Current'), 2)
-                bus['/Dc/0/Power'] = round(json.get('Power'), 0)
+                bus['/Dc/0/Voltage'] = round(data.get('Voltage'), 2)
+                bus['/Dc/0/Current'] = round(data.get('Current'), 2)
+                bus['/Dc/0/Power'] = round(data.get('Power'), 0)
             
-                bus['/Soc'] = json.get('Soc')
+                bus['/Soc'] = data.get('Soc')
                 # bus['/Capacity'] = Capacity
                 # bus['/InstalledCapacity'] = InstalledCapacity
                 # bus['/ConsumedAmphours'] = ConsumedAmphours
             
                 # bus['/Dc/0/Temperature'] = Temperature
-                bus['/System/MaxCellTemperature'] = json.get('MaxCellTemperature')
-                bus['/System/MinCellTemperature'] = json.get('MinCellTemperature')
+                bus['/System/MaxCellTemperature'] = data.get('MaxCellTemperature')
+                bus['/System/MinCellTemperature'] = data.get('MinCellTemperature')
             
-                bus['/System/MaxCellVoltage'] = json.get('MaxCellVoltage')
+                bus['/System/MaxCellVoltage'] = data.get('MaxCellVoltage')
                 # bus['/System/MaxVoltageCellId'] = MaxVoltageCellId
-                bus['/System/MinCellVoltage'] = json.get('MinCellVoltage')
+                bus['/System/MinCellVoltage'] = data.get('MinCellVoltage')
                 # bus['/System/MinVoltageCellId'] = MinVoltageCellId
             
                 # bus['/System/NrOfCellsPerBattery'] = NrOfCellsPerBattery
                 # bus['/System/NrOfModulesOnline'] = NrOfModulesOnline
                 # bus['/System/NrOfModulesOffline'] = NrOfModulesOffline
-                # bus['/System/NrOfModulesBlockingCharge'] = json.get('ModulesBlockingCharge')
+                # bus['/System/NrOfModulesBlockingCharge'] = data.get('ModulesBlockingCharge')
                 # bus['/System/NrOfModulesBlockingDischarge'] = NrOfModulesBlockingDischarge
             
                 # bus['/Alarms/LowVoltage'] = LowVoltage_alarm
@@ -123,36 +153,40 @@ class DbusVirtualBatService(object):
                 # bus['/Alarms/HighChargeCurrent'] = HighChargeCurrent_alarm
                 # bus['/Alarms/HighDischargeCurrent'] = HighDischargeCurrent_alarm
                 # bus['/Alarms/CellImbalance'] = CellImbalance_alarm
-                bus['/Alarms/InternalFailure'] = 0
+                bus['/Alarms/InternalFailure'] = data.get('InternalFailure')
                 
                 # bus['/Alarms/HighChargeTemperature'] = HighChargeTemperature_alarm
                 # bus['/Alarms/LowChargeTemperature'] = LowChargeTemperature_alarm
                 # bus['/Alarms/HighTemperature'] = HighChargeTemperature_alarm
                 # bus['/Alarms/LowTemperature'] = LowChargeTemperature_alarm
             
-                bus['/Info/MaxChargeCurrent'] = json.get('MaxChargeCurrent')
-                bus['/Info/MaxDischargeCurrent'] = json.get('MaxDischargeCurrent')
-                bus['/Info/MaxChargeVoltage'] = json.get('MaxChargeVoltage')
+                bus['/Info/MaxChargeCurrent'] = data.get('MaxChargeCurrent')
+                bus['/Info/MaxDischargeCurrent'] = data.get('MaxDischargeCurrent')
+                bus['/Info/MaxChargeVoltage'] = data.get('MaxChargeVoltage')
+
+                self.lastMessage = time.time()
         except Exception as e:
             logging.info(f'{dt.now()}:{e}, error occurred during update, retrying..')
-            with self._dbusservice as bus:
-                bus['/Alarms/InternalFailure'] = 2
-                bus['/Info/MaxChargeCurrent'] = 0
-                bus['/Info/MaxDischargeCurrent'] = 0
-                bus['/Info/MaxChargeVoltage'] = 54.4
-            #GLib.timeout_add(5000, self._update) 
+            self.setFailsafeSettings()
 
         return True
     
 def main():
     logging.basicConfig(filename = 'virtualbattery.log', level=logging.INFO)
 
-    from dbus.mainloop.glib import DBusGMainLoop
+     from dbus.mainloop.glib import DBusGMainLoop
     # Have a mainloop, so we can send/receive asynchronous calls to and from dbus
     DBusGMainLoop(set_as_default=True)
-    DbusVirtualBatService()
+    customService = DbusVirtualBatService()
 
     logging.info(f'{dt.now()} Connected to dbus')
+
+    # Configuration MQTT
+    client = VictronMQTTClient(
+        'localhost', 1883, 'virtualbattery', customService.callback)
+    client.start()
+
+    GLib.timeout_add_seconds(60, customService.checkLastMessage)
 
     mainloop = GLib.MainLoop()
     mainloop.run()
