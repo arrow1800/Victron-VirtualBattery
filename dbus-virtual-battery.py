@@ -16,15 +16,17 @@ from vedbus import VeDbusService  # , VeDbusItemImport
 class DbusVirtualBatService(object):
 
     lastMessage = time.time()
+    timeoutInSeconds = None
 
-    def __init__(self, servicename='com.victronenergy.battery.virtual.test'):
+    def __init__(self, timeout, servicename='com.victronenergy.battery.virtual'):
+        self.timeoutInSeconds = timeout
         self._dbusservice = VeDbusService(servicename)
         self._dbusConn = dbus.SessionBus(
         ) if 'DBUS_SESSION_BUS_ADDRESS' in os.environ else dbus.SystemBus()
 
         # Create the mandatory objects
         self._dbusservice.add_mandatory_paths(processname=__file__, processversion='0.0', connection='Virtual',
-                                              deviceinstance=17, productid=0, productname='VirtualBattery MQTT', firmwareversion=0.1,
+                                              deviceinstance=15, productid=0, productname='VirtualBattery MQTT', firmwareversion=0.1,
                                               hardwareversion='0.0', connected=1)
 
         # Create DC paths
@@ -88,10 +90,10 @@ class DbusVirtualBatService(object):
                                    writeable=True, gettextcallback=lambda a, x: "{:.1f}V".format(x))
 
     def checkLastMessage(self):
-        if (time.time() - self.lastMessage > 10):
+        if (time.time() - self.lastMessage > self.timeoutInSeconds):
             logging.info(
                 f'{dt.now()} Timeout on MQTT message. Setting failsafe...')
-            print(f'{dt.now()} Timeout on MQTT message. Setting failsafe...')
+            # print(f'{dt.now()} Timeout on MQTT message. Setting failsafe...')
             self.setFailsafeSettings()
         return True
 
@@ -121,7 +123,7 @@ class DbusVirtualBatService(object):
         self._update(data)
 
     def callback(self, client, userdata, msg):
-        print(f"Received `{msg.payload.decode()}` from `{msg.topic}` topic")
+        # print(f"Received `{msg.payload.decode()}` from `{msg.topic}` topic")
         data = json.loads(msg.payload)
 
         # in case we receive data we set this to 0
@@ -133,8 +135,8 @@ class DbusVirtualBatService(object):
 
         try:
 
-            logging.info(f'received data: {data}')
-            print(f'received data: {data}')
+            # logging.info(f'received data: {data}')
+            # print(f'received data: {data}')
 
             with self._dbusservice as bus:
 
@@ -189,7 +191,7 @@ class DbusVirtualBatService(object):
         except Exception as e:
             logging.info(
                 f'{dt.now()}:{e}, error occurred during update, retrying..')
-            print(f'{dt.now()}:{e}, error occurred during update, retrying..')
+            # print(f'{dt.now()}:{e}, error occurred during update, retrying..')
             # self.setFailsafeSettings()
 
         return True
@@ -201,7 +203,8 @@ def main():
     from dbus.mainloop.glib import DBusGMainLoop
     # Have a mainloop, so we can send/receive asynchronous calls to and from dbus
     DBusGMainLoop(set_as_default=True)
-    customService = DbusVirtualBatService()
+    
+    customService = DbusVirtualBatService(60)
 
     logging.info(f'{dt.now()} Connected to dbus')
 
@@ -210,7 +213,7 @@ def main():
         'localhost', 1883, 'virtualbattery', customService.callback)
     client.start()
 
-    GLib.timeout_add_seconds(10, customService.checkLastMessage)
+    GLib.timeout_add_seconds(customService.timeoutInSeconds, customService.checkLastMessage)
 
     mainloop = GLib.MainLoop()
     mainloop.run()
