@@ -1,1 +1,73 @@
-<mxfile host="app.diagrams.net" modified="2023-01-12T15:05:49.439Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="hKYIhFmaZ2z6GWRZ5L85" version="20.0.1" type="device"><diagram name="Page-1" id="e3a06f82-3646-2815-327d-82caf3d4e204">3Vptk6I4EP41ftQiRFQ+js64N1WzL7Ve7V7ttwARqAHChjA69+uvg4kKiTfurszblCPQaRLy9NOd7uAAL/LtB07K5COLaDZwnWg7wNcD18UzjEYenEjZ406GHKwkMU8jJTsIVum/VCsqaZ1GtGopCsYykZZtYciKgoaiJSOcs01bbc2y9qgliakhWIUk01I9Ayn/nkYiUXI08Q8Nf9E0TtTgM3eyawhIeB9zVhdqxIIVdNeSE92NmmWVkIhtjkT4ZoAXnDGxO8u3C5pJbDVm+j7xqB90gOeJyDO4QHDaNC9P3IzOuRnmxWkhjoc71d+ETKPZGrvUwZGPp87Qm+66eCBZrUdwJxl0Nl8z6PN47MnPmumGYdXY/woU3HG5bR5Ft8NZrI5NR4EWLCgPGNzx4R/4GsL/N1rUFRw/r+DrjnAwMDxrLg2t7oWpBN3+QLZ7Ni3uQLRJUkFXJQnl9Qb43sZsnWbZgmWMN9p4ubweTx2Qx5xEKeCo2xoS7GaryI7GcF0Jzu5pR+mBcpECFa+yNC5ALFhptY6yp1Sn2yORstYHynIq+COoqNah5o/ySn+2u9wc83usdJIjbntTV7mWcqt43/eBH3CiKGKnSzD+cffDK/k6/OR/Lym+3ZRo6J1kjGGpcymEZico9Onz9c3w6831SdPbWPL7dHiE6Uvn7o0LhuEt9DjJBdymAvIcgwszZKGC6zs9UWFioUIH/eqeilA+ndOGPSJVQiMlb0xUtU3UcVN3NvVuXANzaFk3f9BSsrQQzRS9OXyckeMAVxfOaILlYeCB9qJpQI3Y7Uh9q7Tpoqvpn+h42twN7ZZOUEfmzjq68IHpJaSUKOTbWK7Uo/s6oLygAM8ohZVTTpPfNifXpEwvwKpZm1VyHdWh4zjIuBZiIdQXscxV6evN6m+QXH25NSgGcxdtchHleiFgQLnFJ/M0iuTtc04hCpGg6coxOCQNQmrBKuXzp1z+mKtKdAHL+L7OaJRt8Nhqm6nN5/uyzOyP84WTwd5YRiBNDWR+8CypwOuO/chxno7+/tQkwri34O+fEfxVMNuldAd47khAsy/gViJtIlnAhGA5KGSyYb7PxjW6EV2TujG4HWBSlbuKYp1u5aIybwa80lJHS+A8EULWI1dy7u6Sk80oTkVSA88oh7AqwB6jEJ7FXT6kIZi4oAXlMaC1LKBoGnIaDaUaT4OhUpDgkUrGGXcZsbDOoQvSTMxdNqNW+uYSahUh6Kgs4suwwpt0SOGbpMC27NBFeIS8noiBbBniCWZUaRFn9EqWfzIpSDlYbMeJDa2ETg3O8+BMzi+QY15gVfQ7yyI2kUXjfYBurYouHo1xX9ia8febpqGzygkXVVLLgNjBu3GnJt9CvwFqzCktLhHF9mvV/xDWmmpM+opiyAxj84+yHDVL71eK4f76xTDUgxkYmn7/SjHE3sFnXw5GZMD4x5X105szXEsOceQh5aIm8nkDAutVg1zE0we5xD1LHX6I5K80HeuU4t65pXhvyZheYnvOyy29mPorWkRyV4/Tn7VcxOU+MHx9UvmTruJ+P6t/OnkoGJd2eKnsAXXDi49MftgKauz3xQ/89nMy5MzOyB5s1XB/IXv8LmBtbzO4U5OtzwzrO6ggDFix9+Kwmvu1H2v5gi5rdllILqEpgqq0Bd1XmrmN8WvI3Gxv0d46X8f4xflq22x867B66MVhNUveFcsIJPdOmMiXsPytOL+HpPM7+z8Lss8aB3APFdzJtPwrDSnUZDLTjoggcFhzuXHpFKcS7V8u2Z52rorVZyXanWqtL2+bdPNu6+JgT70nI/1jiMvzwqzOrncmy0mRlnWm9os78EPPaVnRX4f3Akgau0z294Kurcrd/yDh8kC+gzJm3H3jOrEiayNpf4HrHdQxeyo+C67y5dH+R19N29Ev6/DNfw==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2023-04-03T17:28:03.057Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="_LaML191b97Fljv-FLlE" version="21.1.2" type="device">
+  <diagram name="Page-1" id="e3a06f82-3646-2815-327d-82caf3d4e204">
+    <mxGraphModel dx="2974.5" dy="707" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" style=";html=1;" />
+        <mxCell id="1" style=";html=1;" parent="0" />
+        <mxCell id="6a7d8f32e03d9370-57" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;Cerbo GX - Venus OS Large image&lt;/b&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#FFD470;gradientColor=none;fontSize=14;strokeColor=none;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="-20" y="98" width="1140" height="572" as="geometry" />
+        </mxCell>
+        <mxCell id="b4ZLZ5prfcN9Wpe3Iwp1-5" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;NODE-RED&lt;/font&gt;&lt;/b&gt;" style="whiteSpace=wrap;html=1;fillColor=yellow;gradientColor=none;fontSize=14;strokeColor=none;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="30" y="150" width="810" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="b4ZLZ5prfcN9Wpe3Iwp1-8" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;Modbus&lt;/b&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=yellow;gradientColor=none;fontSize=14;strokeColor=none;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="150" width="97" height="490" as="geometry" />
+        </mxCell>
+        <mxCell id="b4ZLZ5prfcN9Wpe3Iwp1-9" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://raw.githubusercontent.com/victronenergy/node-red-contrib-victron/master/documentation/images/node-palette.png;" parent="1" vertex="1">
+          <mxGeometry x="560" y="190" width="340" height="213.15" as="geometry" />
+        </mxCell>
+        <mxCell id="b4ZLZ5prfcN9Wpe3Iwp1-15" value="" style="shape=singleArrow;direction=west;whiteSpace=wrap;html=1;fillColor=lightblue" parent="1" vertex="1">
+          <mxGeometry x="890" y="230" width="149.5" height="123.43" as="geometry" />
+        </mxCell>
+        <mxCell id="b4ZLZ5prfcN9Wpe3Iwp1-18" value="Victron Smartshunt" style="rounded=1;whiteSpace=wrap;html=1;fillColor=lightgreen" parent="1" vertex="1">
+          <mxGeometry x="1270" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b4ZLZ5prfcN9Wpe3Iwp1-19" value="BMS 1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=lightgreen" parent="1" vertex="1">
+          <mxGeometry x="1270" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b4ZLZ5prfcN9Wpe3Iwp1-20" value="BMS 2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=lightgreen" parent="1" vertex="1">
+          <mxGeometry x="1270" y="353.43" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b4ZLZ5prfcN9Wpe3Iwp1-21" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;br&gt;Victron virtual battery driver&lt;/font&gt;&lt;/b&gt;" style="whiteSpace=wrap;html=1;fillColor=lightblue;gradientColor=none;fontSize=14;strokeColor=none;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="30" y="550" width="810" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="b4ZLZ5prfcN9Wpe3Iwp1-23" value="" style="shape=singleArrow;direction=west;whiteSpace=wrap;html=1;fillColor=lightblue" parent="1" vertex="1">
+          <mxGeometry x="1080" y="190" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b4ZLZ5prfcN9Wpe3Iwp1-24" value="" style="shape=singleArrow;direction=west;whiteSpace=wrap;html=1;fillColor=lightblue" parent="1" vertex="1">
+          <mxGeometry x="1085" y="271" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b4ZLZ5prfcN9Wpe3Iwp1-25" value="" style="shape=singleArrow;direction=west;whiteSpace=wrap;html=1;fillColor=lightblue" parent="1" vertex="1">
+          <mxGeometry x="1085" y="351" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b4ZLZ5prfcN9Wpe3Iwp1-26" value="Multiplus&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=lightgreen" parent="1" vertex="1">
+          <mxGeometry x="1270" y="433.43" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b4ZLZ5prfcN9Wpe3Iwp1-27" value="" style="shape=singleArrow;direction=west;whiteSpace=wrap;html=1;fillColor=lightblue" parent="1" vertex="1">
+          <mxGeometry x="1085" y="431" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b4ZLZ5prfcN9Wpe3Iwp1-28" value="" style="shape=singleArrow;direction=west;whiteSpace=wrap;html=1;fillColor=lightblue" parent="1" vertex="1">
+          <mxGeometry x="1085" y="511" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b4ZLZ5prfcN9Wpe3Iwp1-29" value="Solar charger" style="rounded=1;whiteSpace=wrap;html=1;fillColor=lightgreen" parent="1" vertex="1">
+          <mxGeometry x="1270" y="513.4300000000001" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b4ZLZ5prfcN9Wpe3Iwp1-31" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;pushing data from node-red to driver&lt;/font&gt;&lt;/b&gt;" style="shape=singleArrow;direction=south;whiteSpace=wrap;html=1;fontSize=14;fillColor=lightblue" parent="1" vertex="1">
+          <mxGeometry x="100" y="392.71" width="80" height="136.57" as="geometry" />
+        </mxCell>
+        <mxCell id="b4ZLZ5prfcN9Wpe3Iwp1-32" value="Data manipulation" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="270" y="221.72" width="210" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="b4ZLZ5prfcN9Wpe3Iwp1-33" value="" style="shape=singleArrow;direction=west;whiteSpace=wrap;html=1;fillColor=lightblue" parent="1" vertex="1">
+          <mxGeometry x="480" y="261.72" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b4ZLZ5prfcN9Wpe3Iwp1-34" value="" style="shape=singleArrow;direction=west;whiteSpace=wrap;html=1;fillColor=lightblue" parent="1" vertex="1">
+          <mxGeometry x="210" y="261.72" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wamHNPvwVdszfmEZm6xI-1" value="MQTT server from VenusOS itself" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.mqtt_protocol;fillColor=#5294CF;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="90" y="245" width="100" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

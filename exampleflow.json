@@ -8,58 +8,6 @@
         "env": []
     },
     {
-        "id": "9bf4e4631d68fc99",
-        "type": "group",
-        "z": "1ceb83823bf626ce",
-        "name": "This is the REST API. the virtual driver uses this to get the information from node-red",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "b6fbf18e126f214a",
-            "4663fcdf33eb8998",
-            "a72fda78e4d7d58f",
-            "1c0834172ad30edf",
-            "0e5b3ab2f54d1057"
-        ],
-        "x": 154,
-        "y": 1179,
-        "w": 652,
-        "h": 202
-    },
-    {
-        "id": "63e881f2502c39c4",
-        "type": "group",
-        "z": "1ceb83823bf626ce",
-        "name": "Place where you can modify the incoming stream of data before it goes to the virtual battery",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "feec784551f7da5e",
-            "f0f3e314e9d111f8",
-            "2c767dedb9794c94",
-            "c2af3567952dc598",
-            "4aa1f4ab41f3db7e",
-            "2dc1d934571b9bd2",
-            "5d17457c95b5970b",
-            "a1575f74df16d6e8",
-            "09716c3d6333d5d6",
-            "4afb44ae000e02af",
-            "5ce8a1baede77d3e",
-            "0630fd1cda4657cb",
-            "7c4da685b867180f",
-            "e83efff32ec9653f",
-            "ddd820525fcc55b3",
-            "1ba1c714fd86d385",
-            "6caf8c314a8f60c7"
-        ],
-        "x": 154,
-        "y": 739,
-        "w": 972,
-        "h": 342
-    },
-    {
         "id": "222a409ae4cf9855",
         "type": "group",
         "z": "1ceb83823bf626ce",
@@ -73,22 +21,60 @@
             "ad9f294e07431854",
             "3f6acb6de37723eb",
             "7dce6425b3d8dad5",
-            "6f75e576640949e1",
-            "e3a47a71878e85ae",
-            "641d0556e2c545c5",
-            "f7e59b7468c7cecf",
-            "a26d3cc9a9a9dbc5",
-            "7544dce1a0bc3094",
-            "d9757b79045821a8",
-            "d9f7de176d34f7a0",
-            "00dbff6cec95caf5",
-            "6f18100116a2bf8e",
-            "3d0161ec735e6767"
+            "6f75e576640949e1"
         ],
-        "x": 134,
-        "y": 119,
-        "w": 732,
-        "h": 602
+        "x": 194,
+        "y": 579,
+        "w": 572,
+        "h": 202
+    },
+    {
+        "id": "63e881f2502c39c4",
+        "type": "group",
+        "z": "1ceb83823bf626ce",
+        "name": "Place where you can modify the incoming stream of data before it goes to the virtual battery",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "feec784551f7da5e",
+            "2c767dedb9794c94",
+            "c2af3567952dc598",
+            "2dc1d934571b9bd2",
+            "5d17457c95b5970b",
+            "09716c3d6333d5d6",
+            "6caf8c314a8f60c7",
+            "1017018f225b181e",
+            "1870d52ae22bc658",
+            "e9e06447ab8915e1",
+            "4d7a0663cecacc8b",
+            "1209edc424942856",
+            "f3d8b797bac8734f",
+            "75b5e73ac8be721a",
+            "f5885171fe40d66d",
+            "8b5feac3f604635d",
+            "4cd8855c1ce4b800",
+            "2db9d3181e3e30fe",
+            "809358fdb56a221a",
+            "b983c8e520366000",
+            "cf1cfbbf8bcc2ff6",
+            "674da6b6fc86a5c9",
+            "c6359613b6dc6e3d",
+            "3bd638416fccd21c",
+            "6992644613867616",
+            "177dc55d28340f8f",
+            "90c6bc2d250d5265",
+            "664e91dbc5411359",
+            "33e227fa66e40998",
+            "6199e5585be19a82",
+            "2a32f3945d9f03f8",
+            "49cbbc71d59b86db",
+            "aa86d8e17401402d"
+        ],
+        "x": 174,
+        "y": 799,
+        "w": 2092,
+        "h": 742
     },
     {
         "id": "1a2dd6c925eb721b",
@@ -335,8 +321,8 @@
         },
         "initial": "",
         "name": "",
-        "x": 310,
-        "y": 160,
+        "x": 370,
+        "y": 620,
         "wires": [
             [
                 "ad9f294e07431854"
@@ -588,8 +574,8 @@
         },
         "initial": "",
         "name": "",
-        "x": 330,
-        "y": 220,
+        "x": 390,
+        "y": 680,
         "wires": [
             [
                 "3f6acb6de37723eb"
@@ -616,8 +602,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 610,
-        "y": 160,
+        "x": 670,
+        "y": 620,
         "wires": [
             []
         ]
@@ -642,79 +628,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 600,
-        "y": 220,
+        "x": 660,
+        "y": 680,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "b6fbf18e126f214a",
-        "type": "http in",
-        "z": "1ceb83823bf626ce",
-        "g": "9bf4e4631d68fc99",
-        "name": "",
-        "url": "/virtualbattery",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 270,
-        "y": 1280,
-        "wires": [
-            [
-                "a72fda78e4d7d58f"
-            ]
-        ]
-    },
-    {
-        "id": "4663fcdf33eb8998",
-        "type": "http response",
-        "z": "1ceb83823bf626ce",
-        "g": "9bf4e4631d68fc99",
-        "name": "",
-        "statusCode": "200",
-        "headers": {},
-        "x": 700,
-        "y": 1280,
-        "wires": []
-    },
-    {
-        "id": "a72fda78e4d7d58f",
-        "type": "function",
-        "z": "1ceb83823bf626ce",
-        "g": "9bf4e4631d68fc99",
-        "name": "flow to dictionary",
-        "func": "\n\nlet k1 = 'Soc'\nlet k2 = 'Current'\nlet k3 = 'Voltage'\nlet k4 = 'Power'\nlet k5 = 'MinCellTemperature'\nlet k6 = 'MaxCellTemperature'\nlet k7 = 'MaxChargeCurrent'\nlet k8 = 'MaxDischargeCurrent'\nlet k9 = 'MaxChargeVoltage'\nlet k10 = 'MaxCellVoltage'\nlet k11 = 'MinCellVoltage'\n\nlet arr = [k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11]\n\n\nlet payload = {}\nfor(let i in arr){\n    let v = flow.get(arr[i]) ?? 0;\n    \n    payload[arr[i]] = v\n}\n\nmsg.payload = payload\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 530,
-        "y": 1280,
-        "wires": [
-            [
-                "4663fcdf33eb8998"
-            ]
-        ]
-    },
-    {
-        "id": "1c0834172ad30edf",
-        "type": "debug",
-        "z": "1ceb83823bf626ce",
-        "g": "9bf4e4631d68fc99",
-        "name": "debug 13",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 700,
-        "y": 1340,
-        "wires": []
     },
     {
         "id": "7dce6425b3d8dad5",
@@ -961,8 +879,8 @@
         },
         "initial": "",
         "name": "",
-        "x": 310,
-        "y": 280,
+        "x": 370,
+        "y": 740,
         "wires": [
             [
                 "6f75e576640949e1"
@@ -989,1328 +907,251 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 610,
-        "y": 280,
+        "x": 670,
+        "y": 740,
         "wires": [
             []
         ]
     },
     {
-        "id": "0e5b3ab2f54d1057",
-        "type": "comment",
+        "id": "09e67f6b2fcded8c",
+        "type": "modbus-getter",
         "z": "1ceb83823bf626ce",
-        "g": "9bf4e4631d68fc99",
-        "name": "README / HTTP endpoint for driver",
-        "info": "this is the HTTP rest endpoint that is used by the virtual battery driver in venus os. when it receives a request it sends a response with all the settings for the virtual battery. that is then being processed by the driver",
-        "x": 360,
-        "y": 1220,
-        "wires": []
-    },
-    {
-        "id": "e3a47a71878e85ae",
-        "type": "victron-input-battery",
-        "z": "1ceb83823bf626ce",
-        "g": "222a409ae4cf9855",
-        "service": "com.victronenergy.battery.ttyUSB2",
-        "path": "/System/MinCellVoltage",
-        "serviceObj": {
-            "service": "com.victronenergy.battery.ttyUSB2",
-            "name": "SerialBattery(Jkbms)",
-            "paths": [
-                {
-                    "path": "/Alarms/CellImbalance",
-                    "type": "enum",
-                    "name": "Cell Imbalance alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Warning",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/HighChargeCurrent",
-                    "type": "enum",
-                    "name": "High charge current alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Warning",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/HighChargeTemperature",
-                    "type": "enum",
-                    "name": "High charge temperature alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Warning",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/HighDischargeCurrent",
-                    "type": "enum",
-                    "name": "High discharge current alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Warning",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/HighTemperature",
-                    "type": "enum",
-                    "name": "High battery temperature alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/HighVoltage",
-                    "type": "enum",
-                    "name": "High voltage alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/InternalFailure",
-                    "type": "enum",
-                    "name": "Internal error alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Warning",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/LowCellVoltage",
-                    "type": "enum",
-                    "name": "Low cell voltage alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Almost discharged",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/LowChargeTemperature",
-                    "type": "enum",
-                    "name": "Low charge temperature alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Warning",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/LowSoc",
-                    "type": "enum",
-                    "name": "Low state-of-charge alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/LowTemperature",
-                    "type": "enum",
-                    "name": "Low battery temperature alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/LowVoltage",
-                    "type": "enum",
-                    "name": "Low voltage alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Balancing",
-                    "type": "enum",
-                    "name": "Balancing",
-                    "enum": {
-                        "0": "Inactive",
-                        "1": "Active"
-                    }
-                },
-                {
-                    "path": "/Capacity",
-                    "type": "float",
-                    "name": "Capacity (Ah)"
-                },
-                {
-                    "path": "/ConsumedAmphours",
-                    "type": "float",
-                    "name": "Consumed Amphours (Ah)"
-                },
-                {
-                    "path": "/Dc/0/Current",
-                    "type": "float",
-                    "name": "Current (A)"
-                },
-                {
-                    "path": "/Dc/0/MidVoltage",
-                    "type": "float",
-                    "name": "Mid-point voltage of the battery bank (V)"
-                },
-                {
-                    "path": "/Dc/0/MidVoltageDeviation",
-                    "type": "float",
-                    "name": "Mid-point deviation of the battery bank (%)"
-                },
-                {
-                    "path": "/Dc/0/Temperature",
-                    "type": "float",
-                    "name": "Battery temperature (C)"
-                },
-                {
-                    "path": "/Dc/0/Voltage",
-                    "type": "float",
-                    "name": "Voltage (V)"
-                },
-                {
-                    "path": "/History/ChargeCycles",
-                    "type": "float",
-                    "name": "Charge cycles (count)"
-                },
-                {
-                    "path": "/History/TotalAhDrawn",
-                    "type": "float",
-                    "name": "Total Ah drawn (Ah)"
-                },
-                {
-                    "path": "/Info/BatteryLowVoltage",
-                    "type": "float",
-                    "name": "Min discharge voltage (V DC)"
-                },
-                {
-                    "path": "/Info/MaxChargeCurrent",
-                    "type": "float",
-                    "name": "CCL - Charge Current Limit (A)"
-                },
-                {
-                    "path": "/Info/MaxChargeVoltage",
-                    "type": "float",
-                    "name": "CVL - Charge Voltage Limit (V)"
-                },
-                {
-                    "path": "/Info/MaxDischargeCurrent",
-                    "type": "float",
-                    "name": "DCL - Discharge Current Limit (A)"
-                },
-                {
-                    "path": "/Io/AllowToCharge",
-                    "type": "enum",
-                    "name": "ATC (Allow to Charge)",
-                    "enum": {
-                        "0": "No",
-                        "1": "Yes"
-                    }
-                },
-                {
-                    "path": "/Io/AllowToDischarge",
-                    "type": "enum",
-                    "name": "ATD (Allow to Discharge)",
-                    "enum": {
-                        "0": "No",
-                        "1": "Yes"
-                    }
-                },
-                {
-                    "path": "/Soc",
-                    "type": "float",
-                    "name": "State of charge (%)"
-                },
-                {
-                    "path": "/System/MaxVoltageCellId",
-                    "type": "string",
-                    "name": "System; ID of module with highest cell voltage"
-                },
-                {
-                    "path": "/System/MaxCellTemperature",
-                    "type": "float",
-                    "name": "Maximum cell temperature (Degrees celsius)"
-                },
-                {
-                    "path": "/System/MaxCellVoltage",
-                    "type": "float",
-                    "name": "System; maximum cell voltage (V DC)"
-                },
-                {
-                    "path": "/System/MinVoltageCellId",
-                    "type": "string",
-                    "name": "System; ID of module with lowest cell voltage"
-                },
-                {
-                    "path": "/System/MinCellTemperature",
-                    "type": "float",
-                    "name": "Minimum cell temperature (Degrees celsius)"
-                },
-                {
-                    "path": "/System/MinCellVoltage",
-                    "type": "float",
-                    "name": "System; minimum cell voltage (V DC)"
-                },
-                {
-                    "path": "/System/NrOfCellsPerBattery",
-                    "type": "float",
-                    "name": "System; number of cells per battery (count)"
-                },
-                {
-                    "path": "/System/NrOfModulesBlockingCharge",
-                    "type": "integer",
-                    "name": "Number of modules blocking charge"
-                },
-                {
-                    "path": "/System/NrOfModulesBlockingDischarge",
-                    "type": "integer",
-                    "name": "Number of modules blocking discharge"
-                },
-                {
-                    "path": "/System/NrOfModulesOffline",
-                    "type": "integer",
-                    "name": "Number of offline modules"
-                },
-                {
-                    "path": "/System/NrOfModulesOnline",
-                    "type": "integer",
-                    "name": "Number of online modules"
-                }
-            ]
-        },
-        "pathObj": {
-            "path": "/System/MinCellVoltage",
-            "type": "float",
-            "name": "System; minimum cell voltage (V DC)"
-        },
-        "initial": "",
-        "name": "",
-        "x": 380,
-        "y": 460,
+        "name": "get min cell voltage",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "logIOActivities": false,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "1290",
+        "quantity": "1",
+        "server": "f3d4d006239162ec",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": true,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 430,
+        "y": 840,
         "wires": [
             [
-                "641d0556e2c545c5"
-            ]
-        ]
-    },
-    {
-        "id": "641d0556e2c545c5",
-        "type": "change",
-        "z": "1ceb83823bf626ce",
-        "g": "222a409ae4cf9855",
-        "name": "flow.minCellVoltage1",
-        "rules": [
-            {
-                "t": "set",
-                "p": "minCellVoltage1",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 740,
-        "y": 460,
-        "wires": [
+                "1870d52ae22bc658"
+            ],
             []
         ]
     },
     {
-        "id": "f7e59b7468c7cecf",
-        "type": "change",
+        "id": "028bae00e0ebe91c",
+        "type": "modbus-getter",
         "z": "1ceb83823bf626ce",
-        "g": "222a409ae4cf9855",
-        "name": "flow.maxCellVoltage1",
-        "rules": [
-            {
-                "t": "set",
-                "p": "maxCellVoltage1",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 740,
-        "y": 520,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a26d3cc9a9a9dbc5",
-        "type": "victron-input-battery",
-        "z": "1ceb83823bf626ce",
-        "g": "222a409ae4cf9855",
-        "service": "com.victronenergy.battery.ttyUSB2",
-        "path": "/System/MaxCellVoltage",
-        "serviceObj": {
-            "service": "com.victronenergy.battery.ttyUSB2",
-            "name": "SerialBattery(Jkbms)",
-            "paths": [
-                {
-                    "path": "/Alarms/CellImbalance",
-                    "type": "enum",
-                    "name": "Cell Imbalance alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Warning",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/HighChargeCurrent",
-                    "type": "enum",
-                    "name": "High charge current alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Warning",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/HighChargeTemperature",
-                    "type": "enum",
-                    "name": "High charge temperature alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Warning",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/HighDischargeCurrent",
-                    "type": "enum",
-                    "name": "High discharge current alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Warning",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/HighTemperature",
-                    "type": "enum",
-                    "name": "High battery temperature alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/HighVoltage",
-                    "type": "enum",
-                    "name": "High voltage alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/InternalFailure",
-                    "type": "enum",
-                    "name": "Internal error alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Warning",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/LowCellVoltage",
-                    "type": "enum",
-                    "name": "Low cell voltage alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Almost discharged",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/LowChargeTemperature",
-                    "type": "enum",
-                    "name": "Low charge temperature alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Warning",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/LowSoc",
-                    "type": "enum",
-                    "name": "Low state-of-charge alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/LowTemperature",
-                    "type": "enum",
-                    "name": "Low battery temperature alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/LowVoltage",
-                    "type": "enum",
-                    "name": "Low voltage alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Balancing",
-                    "type": "enum",
-                    "name": "Balancing",
-                    "enum": {
-                        "0": "Inactive",
-                        "1": "Active"
-                    }
-                },
-                {
-                    "path": "/Capacity",
-                    "type": "float",
-                    "name": "Capacity (Ah)"
-                },
-                {
-                    "path": "/ConsumedAmphours",
-                    "type": "float",
-                    "name": "Consumed Amphours (Ah)"
-                },
-                {
-                    "path": "/Dc/0/Current",
-                    "type": "float",
-                    "name": "Current (A)"
-                },
-                {
-                    "path": "/Dc/0/MidVoltage",
-                    "type": "float",
-                    "name": "Mid-point voltage of the battery bank (V)"
-                },
-                {
-                    "path": "/Dc/0/MidVoltageDeviation",
-                    "type": "float",
-                    "name": "Mid-point deviation of the battery bank (%)"
-                },
-                {
-                    "path": "/Dc/0/Temperature",
-                    "type": "float",
-                    "name": "Battery temperature (C)"
-                },
-                {
-                    "path": "/Dc/0/Voltage",
-                    "type": "float",
-                    "name": "Voltage (V)"
-                },
-                {
-                    "path": "/History/ChargeCycles",
-                    "type": "float",
-                    "name": "Charge cycles (count)"
-                },
-                {
-                    "path": "/History/TotalAhDrawn",
-                    "type": "float",
-                    "name": "Total Ah drawn (Ah)"
-                },
-                {
-                    "path": "/Info/BatteryLowVoltage",
-                    "type": "float",
-                    "name": "Min discharge voltage (V DC)"
-                },
-                {
-                    "path": "/Info/MaxChargeCurrent",
-                    "type": "float",
-                    "name": "CCL - Charge Current Limit (A)"
-                },
-                {
-                    "path": "/Info/MaxChargeVoltage",
-                    "type": "float",
-                    "name": "CVL - Charge Voltage Limit (V)"
-                },
-                {
-                    "path": "/Info/MaxDischargeCurrent",
-                    "type": "float",
-                    "name": "DCL - Discharge Current Limit (A)"
-                },
-                {
-                    "path": "/Io/AllowToCharge",
-                    "type": "enum",
-                    "name": "ATC (Allow to Charge)",
-                    "enum": {
-                        "0": "No",
-                        "1": "Yes"
-                    }
-                },
-                {
-                    "path": "/Io/AllowToDischarge",
-                    "type": "enum",
-                    "name": "ATD (Allow to Discharge)",
-                    "enum": {
-                        "0": "No",
-                        "1": "Yes"
-                    }
-                },
-                {
-                    "path": "/Soc",
-                    "type": "float",
-                    "name": "State of charge (%)"
-                },
-                {
-                    "path": "/System/MaxVoltageCellId",
-                    "type": "string",
-                    "name": "System; ID of module with highest cell voltage"
-                },
-                {
-                    "path": "/System/MaxCellTemperature",
-                    "type": "float",
-                    "name": "Maximum cell temperature (Degrees celsius)"
-                },
-                {
-                    "path": "/System/MaxCellVoltage",
-                    "type": "float",
-                    "name": "System; maximum cell voltage (V DC)"
-                },
-                {
-                    "path": "/System/MinVoltageCellId",
-                    "type": "string",
-                    "name": "System; ID of module with lowest cell voltage"
-                },
-                {
-                    "path": "/System/MinCellTemperature",
-                    "type": "float",
-                    "name": "Minimum cell temperature (Degrees celsius)"
-                },
-                {
-                    "path": "/System/MinCellVoltage",
-                    "type": "float",
-                    "name": "System; minimum cell voltage (V DC)"
-                },
-                {
-                    "path": "/System/NrOfCellsPerBattery",
-                    "type": "float",
-                    "name": "System; number of cells per battery (count)"
-                },
-                {
-                    "path": "/System/NrOfModulesBlockingCharge",
-                    "type": "integer",
-                    "name": "Number of modules blocking charge"
-                },
-                {
-                    "path": "/System/NrOfModulesBlockingDischarge",
-                    "type": "integer",
-                    "name": "Number of modules blocking discharge"
-                },
-                {
-                    "path": "/System/NrOfModulesOffline",
-                    "type": "integer",
-                    "name": "Number of offline modules"
-                },
-                {
-                    "path": "/System/NrOfModulesOnline",
-                    "type": "integer",
-                    "name": "Number of online modules"
-                }
-            ]
-        },
-        "pathObj": {
-            "path": "/System/MaxCellVoltage",
-            "type": "float",
-            "name": "System; maximum cell voltage (V DC)"
-        },
-        "initial": "",
-        "name": "",
-        "x": 380,
-        "y": 520,
+        "name": "get min cell voltage",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "logIOActivities": false,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "1290",
+        "quantity": "1",
+        "server": "f3d4d006239162ec",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": true,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 430,
+        "y": 880,
         "wires": [
             [
-                "f7e59b7468c7cecf"
-            ]
-        ]
-    },
-    {
-        "id": "7544dce1a0bc3094",
-        "type": "victron-input-battery",
-        "z": "1ceb83823bf626ce",
-        "g": "222a409ae4cf9855",
-        "service": "com.victronenergy.battery.ttyUSB0",
-        "path": "/System/MinCellVoltage",
-        "serviceObj": {
-            "service": "com.victronenergy.battery.ttyUSB0",
-            "name": "SerialBattery(Jkbms)",
-            "paths": [
-                {
-                    "path": "/Alarms/CellImbalance",
-                    "type": "enum",
-                    "name": "Cell Imbalance alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Warning",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/HighChargeCurrent",
-                    "type": "enum",
-                    "name": "High charge current alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Warning",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/HighChargeTemperature",
-                    "type": "enum",
-                    "name": "High charge temperature alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Warning",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/HighDischargeCurrent",
-                    "type": "enum",
-                    "name": "High discharge current alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Warning",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/HighTemperature",
-                    "type": "enum",
-                    "name": "High battery temperature alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/HighVoltage",
-                    "type": "enum",
-                    "name": "High voltage alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/InternalFailure",
-                    "type": "enum",
-                    "name": "Internal error alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Warning",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/LowCellVoltage",
-                    "type": "enum",
-                    "name": "Low cell voltage alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Almost discharged",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/LowChargeTemperature",
-                    "type": "enum",
-                    "name": "Low charge temperature alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Warning",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/LowSoc",
-                    "type": "enum",
-                    "name": "Low state-of-charge alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/LowTemperature",
-                    "type": "enum",
-                    "name": "Low battery temperature alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/LowVoltage",
-                    "type": "enum",
-                    "name": "Low voltage alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Balancing",
-                    "type": "enum",
-                    "name": "Balancing",
-                    "enum": {
-                        "0": "Inactive",
-                        "1": "Active"
-                    }
-                },
-                {
-                    "path": "/Capacity",
-                    "type": "float",
-                    "name": "Capacity (Ah)"
-                },
-                {
-                    "path": "/ConsumedAmphours",
-                    "type": "float",
-                    "name": "Consumed Amphours (Ah)"
-                },
-                {
-                    "path": "/Dc/0/Current",
-                    "type": "float",
-                    "name": "Current (A)"
-                },
-                {
-                    "path": "/Dc/0/MidVoltage",
-                    "type": "float",
-                    "name": "Mid-point voltage of the battery bank (V)"
-                },
-                {
-                    "path": "/Dc/0/MidVoltageDeviation",
-                    "type": "float",
-                    "name": "Mid-point deviation of the battery bank (%)"
-                },
-                {
-                    "path": "/Dc/0/Temperature",
-                    "type": "float",
-                    "name": "Battery temperature (C)"
-                },
-                {
-                    "path": "/Dc/0/Voltage",
-                    "type": "float",
-                    "name": "Voltage (V)"
-                },
-                {
-                    "path": "/History/ChargeCycles",
-                    "type": "float",
-                    "name": "Charge cycles (count)"
-                },
-                {
-                    "path": "/History/TotalAhDrawn",
-                    "type": "float",
-                    "name": "Total Ah drawn (Ah)"
-                },
-                {
-                    "path": "/Info/BatteryLowVoltage",
-                    "type": "float",
-                    "name": "Min discharge voltage (V DC)"
-                },
-                {
-                    "path": "/Info/MaxChargeCurrent",
-                    "type": "float",
-                    "name": "CCL - Charge Current Limit (A)"
-                },
-                {
-                    "path": "/Info/MaxChargeVoltage",
-                    "type": "float",
-                    "name": "CVL - Charge Voltage Limit (V)"
-                },
-                {
-                    "path": "/Info/MaxDischargeCurrent",
-                    "type": "float",
-                    "name": "DCL - Discharge Current Limit (A)"
-                },
-                {
-                    "path": "/Io/AllowToCharge",
-                    "type": "enum",
-                    "name": "ATC (Allow to Charge)",
-                    "enum": {
-                        "0": "No",
-                        "1": "Yes"
-                    }
-                },
-                {
-                    "path": "/Io/AllowToDischarge",
-                    "type": "enum",
-                    "name": "ATD (Allow to Discharge)",
-                    "enum": {
-                        "0": "No",
-                        "1": "Yes"
-                    }
-                },
-                {
-                    "path": "/Soc",
-                    "type": "float",
-                    "name": "State of charge (%)"
-                },
-                {
-                    "path": "/System/MaxVoltageCellId",
-                    "type": "string",
-                    "name": "System; ID of module with highest cell voltage"
-                },
-                {
-                    "path": "/System/MaxCellTemperature",
-                    "type": "float",
-                    "name": "Maximum cell temperature (Degrees celsius)"
-                },
-                {
-                    "path": "/System/MaxCellVoltage",
-                    "type": "float",
-                    "name": "System; maximum cell voltage (V DC)"
-                },
-                {
-                    "path": "/System/MinVoltageCellId",
-                    "type": "string",
-                    "name": "System; ID of module with lowest cell voltage"
-                },
-                {
-                    "path": "/System/MinCellTemperature",
-                    "type": "float",
-                    "name": "Minimum cell temperature (Degrees celsius)"
-                },
-                {
-                    "path": "/System/MinCellVoltage",
-                    "type": "float",
-                    "name": "System; minimum cell voltage (V DC)"
-                },
-                {
-                    "path": "/System/NrOfCellsPerBattery",
-                    "type": "float",
-                    "name": "System; number of cells per battery (count)"
-                },
-                {
-                    "path": "/System/NrOfModulesBlockingCharge",
-                    "type": "integer",
-                    "name": "Number of modules blocking charge"
-                },
-                {
-                    "path": "/System/NrOfModulesBlockingDischarge",
-                    "type": "integer",
-                    "name": "Number of modules blocking discharge"
-                },
-                {
-                    "path": "/System/NrOfModulesOffline",
-                    "type": "integer",
-                    "name": "Number of offline modules"
-                },
-                {
-                    "path": "/System/NrOfModulesOnline",
-                    "type": "integer",
-                    "name": "Number of online modules"
-                }
-            ]
-        },
-        "pathObj": {
-            "path": "/System/MinCellVoltage",
-            "type": "float",
-            "name": "System; minimum cell voltage (V DC)"
-        },
-        "initial": "",
-        "name": "",
-        "x": 380,
-        "y": 620,
-        "wires": [
-            [
-                "d9757b79045821a8"
-            ]
-        ]
-    },
-    {
-        "id": "d9757b79045821a8",
-        "type": "change",
-        "z": "1ceb83823bf626ce",
-        "g": "222a409ae4cf9855",
-        "name": "flow.minCellVoltage2",
-        "rules": [
-            {
-                "t": "set",
-                "p": "minCellVoltage2",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 740,
-        "y": 620,
-        "wires": [
+                "f3d8b797bac8734f"
+            ],
             []
         ]
     },
     {
-        "id": "d9f7de176d34f7a0",
-        "type": "change",
+        "id": "38e295140ea916bf",
+        "type": "modbus-getter",
         "z": "1ceb83823bf626ce",
-        "g": "222a409ae4cf9855",
-        "name": "flow.maxCellVoltage2",
-        "rules": [
-            {
-                "t": "set",
-                "p": "maxCellVoltage2",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 740,
-        "y": 680,
+        "name": "get min cell voltage",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "logIOActivities": false,
+        "unitid": "3",
+        "dataType": "HoldingRegister",
+        "adr": "1290",
+        "quantity": "1",
+        "server": "f3d4d006239162ec",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": true,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 430,
+        "y": 920,
         "wires": [
+            [
+                "75b5e73ac8be721a"
+            ],
             []
         ]
     },
     {
-        "id": "00dbff6cec95caf5",
-        "type": "victron-input-battery",
+        "id": "f216f6ca6f08330b",
+        "type": "modbus-getter",
         "z": "1ceb83823bf626ce",
-        "g": "222a409ae4cf9855",
-        "service": "com.victronenergy.battery.ttyUSB0",
-        "path": "/System/MaxCellVoltage",
-        "serviceObj": {
-            "service": "com.victronenergy.battery.ttyUSB0",
-            "name": "SerialBattery(Jkbms)",
-            "paths": [
-                {
-                    "path": "/Alarms/CellImbalance",
-                    "type": "enum",
-                    "name": "Cell Imbalance alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Warning",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/HighChargeCurrent",
-                    "type": "enum",
-                    "name": "High charge current alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Warning",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/HighChargeTemperature",
-                    "type": "enum",
-                    "name": "High charge temperature alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Warning",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/HighDischargeCurrent",
-                    "type": "enum",
-                    "name": "High discharge current alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Warning",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/HighTemperature",
-                    "type": "enum",
-                    "name": "High battery temperature alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/HighVoltage",
-                    "type": "enum",
-                    "name": "High voltage alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/InternalFailure",
-                    "type": "enum",
-                    "name": "Internal error alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Warning",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/LowCellVoltage",
-                    "type": "enum",
-                    "name": "Low cell voltage alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Almost discharged",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/LowChargeTemperature",
-                    "type": "enum",
-                    "name": "Low charge temperature alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "1": "Warning",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/LowSoc",
-                    "type": "enum",
-                    "name": "Low state-of-charge alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/LowTemperature",
-                    "type": "enum",
-                    "name": "Low battery temperature alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Alarms/LowVoltage",
-                    "type": "enum",
-                    "name": "Low voltage alarm",
-                    "enum": {
-                        "0": "No alarm",
-                        "2": "Alarm"
-                    }
-                },
-                {
-                    "path": "/Balancing",
-                    "type": "enum",
-                    "name": "Balancing",
-                    "enum": {
-                        "0": "Inactive",
-                        "1": "Active"
-                    }
-                },
-                {
-                    "path": "/Capacity",
-                    "type": "float",
-                    "name": "Capacity (Ah)"
-                },
-                {
-                    "path": "/ConsumedAmphours",
-                    "type": "float",
-                    "name": "Consumed Amphours (Ah)"
-                },
-                {
-                    "path": "/Dc/0/Current",
-                    "type": "float",
-                    "name": "Current (A)"
-                },
-                {
-                    "path": "/Dc/0/MidVoltage",
-                    "type": "float",
-                    "name": "Mid-point voltage of the battery bank (V)"
-                },
-                {
-                    "path": "/Dc/0/MidVoltageDeviation",
-                    "type": "float",
-                    "name": "Mid-point deviation of the battery bank (%)"
-                },
-                {
-                    "path": "/Dc/0/Temperature",
-                    "type": "float",
-                    "name": "Battery temperature (C)"
-                },
-                {
-                    "path": "/Dc/0/Voltage",
-                    "type": "float",
-                    "name": "Voltage (V)"
-                },
-                {
-                    "path": "/History/ChargeCycles",
-                    "type": "float",
-                    "name": "Charge cycles (count)"
-                },
-                {
-                    "path": "/History/TotalAhDrawn",
-                    "type": "float",
-                    "name": "Total Ah drawn (Ah)"
-                },
-                {
-                    "path": "/Info/BatteryLowVoltage",
-                    "type": "float",
-                    "name": "Min discharge voltage (V DC)"
-                },
-                {
-                    "path": "/Info/MaxChargeCurrent",
-                    "type": "float",
-                    "name": "CCL - Charge Current Limit (A)"
-                },
-                {
-                    "path": "/Info/MaxChargeVoltage",
-                    "type": "float",
-                    "name": "CVL - Charge Voltage Limit (V)"
-                },
-                {
-                    "path": "/Info/MaxDischargeCurrent",
-                    "type": "float",
-                    "name": "DCL - Discharge Current Limit (A)"
-                },
-                {
-                    "path": "/Io/AllowToCharge",
-                    "type": "enum",
-                    "name": "ATC (Allow to Charge)",
-                    "enum": {
-                        "0": "No",
-                        "1": "Yes"
-                    }
-                },
-                {
-                    "path": "/Io/AllowToDischarge",
-                    "type": "enum",
-                    "name": "ATD (Allow to Discharge)",
-                    "enum": {
-                        "0": "No",
-                        "1": "Yes"
-                    }
-                },
-                {
-                    "path": "/Soc",
-                    "type": "float",
-                    "name": "State of charge (%)"
-                },
-                {
-                    "path": "/System/MaxVoltageCellId",
-                    "type": "string",
-                    "name": "System; ID of module with highest cell voltage"
-                },
-                {
-                    "path": "/System/MaxCellTemperature",
-                    "type": "float",
-                    "name": "Maximum cell temperature (Degrees celsius)"
-                },
-                {
-                    "path": "/System/MaxCellVoltage",
-                    "type": "float",
-                    "name": "System; maximum cell voltage (V DC)"
-                },
-                {
-                    "path": "/System/MinVoltageCellId",
-                    "type": "string",
-                    "name": "System; ID of module with lowest cell voltage"
-                },
-                {
-                    "path": "/System/MinCellTemperature",
-                    "type": "float",
-                    "name": "Minimum cell temperature (Degrees celsius)"
-                },
-                {
-                    "path": "/System/MinCellVoltage",
-                    "type": "float",
-                    "name": "System; minimum cell voltage (V DC)"
-                },
-                {
-                    "path": "/System/NrOfCellsPerBattery",
-                    "type": "float",
-                    "name": "System; number of cells per battery (count)"
-                },
-                {
-                    "path": "/System/NrOfModulesBlockingCharge",
-                    "type": "integer",
-                    "name": "Number of modules blocking charge"
-                },
-                {
-                    "path": "/System/NrOfModulesBlockingDischarge",
-                    "type": "integer",
-                    "name": "Number of modules blocking discharge"
-                },
-                {
-                    "path": "/System/NrOfModulesOffline",
-                    "type": "integer",
-                    "name": "Number of offline modules"
-                },
-                {
-                    "path": "/System/NrOfModulesOnline",
-                    "type": "integer",
-                    "name": "Number of online modules"
-                }
-            ]
-        },
-        "pathObj": {
-            "path": "/System/MaxCellVoltage",
-            "type": "float",
-            "name": "System; maximum cell voltage (V DC)"
-        },
-        "initial": "",
-        "name": "",
-        "x": 380,
-        "y": 680,
+        "name": "get min cell voltage",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "logIOActivities": false,
+        "unitid": "4",
+        "dataType": "HoldingRegister",
+        "adr": "1290",
+        "quantity": "1",
+        "server": "f3d4d006239162ec",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": true,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 430,
+        "y": 960,
         "wires": [
             [
-                "d9f7de176d34f7a0"
-            ]
+                "f5885171fe40d66d"
+            ],
+            []
         ]
     },
     {
-        "id": "6f18100116a2bf8e",
-        "type": "comment",
+        "id": "21e1bdd2478d561b",
+        "type": "modbus-getter",
         "z": "1ceb83823bf626ce",
-        "g": "222a409ae4cf9855",
-        "name": "First battery with BMS",
-        "info": "",
-        "x": 260,
-        "y": 400,
-        "wires": []
+        "name": "get max cell voltage",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "logIOActivities": false,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "1291",
+        "quantity": "1",
+        "server": "f3d4d006239162ec",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": true,
+        "delayOnStart": true,
+        "startDelayTime": "",
+        "x": 440,
+        "y": 1080,
+        "wires": [
+            [
+                "2db9d3181e3e30fe"
+            ],
+            []
+        ]
     },
     {
-        "id": "3d0161ec735e6767",
-        "type": "comment",
+        "id": "488a296253b83217",
+        "type": "modbus-getter",
         "z": "1ceb83823bf626ce",
-        "g": "222a409ae4cf9855",
-        "name": "Second battery with BMS",
-        "info": "",
-        "x": 270,
-        "y": 580,
-        "wires": []
+        "name": "get max cell voltage",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "logIOActivities": false,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "1291",
+        "quantity": "1",
+        "server": "f3d4d006239162ec",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": true,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 440,
+        "y": 1120,
+        "wires": [
+            [
+                "809358fdb56a221a"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "adfb4ca66da36554",
+        "type": "modbus-getter",
+        "z": "1ceb83823bf626ce",
+        "name": "get max cell voltage",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "logIOActivities": false,
+        "unitid": "3",
+        "dataType": "HoldingRegister",
+        "adr": "1291",
+        "quantity": "1",
+        "server": "f3d4d006239162ec",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": true,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 440,
+        "y": 1160,
+        "wires": [
+            [
+                "b983c8e520366000"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "21d711f47e2dcc6b",
+        "type": "modbus-getter",
+        "z": "1ceb83823bf626ce",
+        "name": "get max cell voltage",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "logIOActivities": false,
+        "unitid": "4",
+        "dataType": "HoldingRegister",
+        "adr": "1291",
+        "quantity": "1",
+        "server": "f3d4d006239162ec",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": true,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 440,
+        "y": 1200,
+        "wires": [
+            [
+                "cf1cfbbf8bcc2ff6"
+            ],
+            []
+        ]
     },
     {
         "id": "feec784551f7da5e",
@@ -2334,35 +1175,20 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 270,
-        "y": 900,
+        "x": 290,
+        "y": 1280,
         "wires": [
             [
                 "2c767dedb9794c94",
                 "5d17457c95b5970b",
-                "4afb44ae000e02af",
-                "ddd820525fcc55b3"
-            ]
-        ]
-    },
-    {
-        "id": "f0f3e314e9d111f8",
-        "type": "rbe",
-        "z": "1ceb83823bf626ce",
-        "g": "63e881f2502c39c4",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "maxDischargeCurrent",
-        "topi": "topic",
-        "x": 750,
-        "y": 1000,
-        "wires": [
-            [
-                "2dc1d934571b9bd2"
+                "21d711f47e2dcc6b",
+                "adfb4ca66da36554",
+                "488a296253b83217",
+                "21e1bdd2478d561b",
+                "f216f6ca6f08330b",
+                "38e295140ea916bf",
+                "028bae00e0ebe91c",
+                "09e67f6b2fcded8c"
             ]
         ]
     },
@@ -2371,19 +1197,20 @@
         "type": "function",
         "z": "1ceb83823bf626ce",
         "g": "63e881f2502c39c4",
-        "name": "calculate max (dis)charge current",
-        "func": "//configured max charge and discharge values for whole bank\nmsg.maxChargeCurrent = 200\nmsg.maxDischargeCurrent = 200\n\n//configured min and max cell values, can be changed if necessary\nlet configuredMinCellV = 2.80\nlet configuredMaxCellV = 3.40\n\nlet configuredBankMinVoltage = 16 * configuredMinCellV\nlet configuredBankMaxVoltage = 16 * configuredMaxCellV\n\n//getting current measured values\nlet bankVoltage = flow.get('Voltage')\nlet soc = flow.get('Soc')\n\nlet minCellV = flow.get('MinCellVoltage')\nlet maxCellV = flow.get('MaxCellVoltage')\n\n// ------------------------- CHANGING (DIS)Charge currents based on SOC ---------------------- //\nif(soc >= 95){\n    msg.maxChargeCurrent /= 4 //200 amps * 48v = 9.6Kwh / 4 = 2.4Kwh\n}\nelse if(soc >= 90){\n    msg.maxChargeCurrent /= 2 //200 amps * 48v = 9.6Kwh / 2 = 4.8Kwh\n}\n\nif(soc <= 2){\n    msg.maxDischargeCurrent /= 4 //200 amps * 48v = 9.6Kwh / 4 = 2.4Kwh\n}\nelse if(soc <= 5){\n    msg.maxDischargeCurrent /= 2 //200 amps * 48v = 9.6Kwh / 2 = 4.8Kwh\n}\n\n\n// ------------------------- LAST LINE OF DEFENSE ----------------- //\n\n// if total bank voltage is lower then configured total voltage (batt is not full yet) AND one of the cells is higher then the configured value \n// if total bank voltage is higher then the configured value, venus os will take care of the battery\nif(bankVoltage < configuredBankMaxVoltage && maxCellV > configuredMaxCellV){\n    node.warn('cell voltage to high, setting charge current to zero')\n\n    msg.maxChargeCurrent = 0\n}\n\n\n//if total bank voltage is larger then the configured total voltage(batt is not empty yet) AND one of the cells is lower then the configured value\n//if total bank voltage is lower then the configured value, venus os will take care of the battery\nif(bankVoltage > configuredBankMinVoltage && minCellV < configuredMinCellV){\n    node.warn('cell voltage to low, setting discharge current to zero')\n    \n    msg.maxDischargeCurrent = 0\n}\n\n\nreturn msg;",
+        "name": "calculate max (dis)charge current / charge voltage",
+        "func": "msg.maxChargeCurrent = 200\nmsg.maxDischargeCurrent = 200\nmsg.modulesBlockingCharge = 0\nmsg.maxChargeVoltage = 55.20\n\n//getting current measured values\nlet bankVoltage = flow.get('Voltage')\nlet soc = flow.get('Soc')\n\nlet minCellV = flow.get('MinCellVoltage')\nlet maxCellV = flow.get('MaxCellVoltage')\n\n// ------------------------- CHANGING (DIS)Charge currents based on SOC ---------------------- //\nif(soc >= 95){\n    msg.maxChargeCurrent /= 4 //200 amps * 48v = 9.6Kwh / 4 = 2.4Kwh\n    msg.maxChargeVoltage = 54.20\n}\nelse if(soc >= 80){\n    msg.maxChargeCurrent /= 2 //200 amps * 48v = 9.6Kwh / 2 = 4.8Kwh\n    msg.maxChargeVoltage = 54.20\n}\n\nif(soc <= 2){\n    msg.maxDischargeCurrent /= 4 //200 amps * 48v = 9.6Kwh / 4 = 2.4Kwh\n}\nelse if(soc <= 5){\n    msg.maxDischargeCurrent /= 2 //200 amps * 48v = 9.6Kwh / 2 = 4.8Kwh\n}\n\n\n// ------------------------- LAST LINE OF DEFENSE ----------------- //\n\n\nif(maxCellV >= 3.55){ \n    msg.maxChargeCurrent = 0\n    msg.maxChargeVoltage = 53.80\n}\nelse if(maxCellV >= 3.53){ \n    //msg.maxChargeCurrent = 0//16 // = 2.4Kwh\n    msg.maxChargeVoltage = 53.80\n}\nelse if(maxCellV >= 3.50){ \n    //msg.maxChargeCurrent = 0//16 // = 2.4Kwh\n    msg.maxChargeVoltage = 54.00\n}\n/*\nelse if(maxCellV >= 3.47){ \n    //msg.maxChargeCurrent = 0//16 // = 2.4Kwh\n    msg.maxChargeVoltage = 54.60 //54.6\n}\nelse if(maxCellV >= 3.45){ \n    //msg.maxChargeCurrent = 0//16 // = 2.4Kwh\n    msg.maxChargeVoltage = 54.8 //54.80\n}\n*/\n//else dus 55.2 = 3.45v per cell\n\n\nif(minCellV <= 2.60){ //2.6\n    msg.maxDischargeCurrent = 0\n}\nelse if (minCellV <= 2.70) //2.7\n{\n    msg.maxDischargeCurrent /= 4 //200 amps * 48v = 9.6Kwh / 4 = 2.4Kwh\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 540,
-        "y": 1000,
+        "x": 450,
+        "y": 1440,
         "wires": [
             [
-                "f0f3e314e9d111f8",
-                "4aa1f4ab41f3db7e"
+                "674da6b6fc86a5c9",
+                "c2af3567952dc598",
+                "2dc1d934571b9bd2"
             ]
         ]
     },
@@ -2407,31 +1234,10 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 970,
-        "y": 1040,
+        "x": 990,
+        "y": 1420,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "4aa1f4ab41f3db7e",
-        "type": "rbe",
-        "z": "1ceb83823bf626ce",
-        "g": "63e881f2502c39c4",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "maxChargeCurrent",
-        "topi": "topic",
-        "x": 750,
-        "y": 1040,
-        "wires": [
-            [
-                "c2af3567952dc598"
-            ]
         ]
     },
     {
@@ -2454,8 +1260,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 980,
-        "y": 1000,
+        "x": 1000,
+        "y": 1380,
         "wires": [
             []
         ]
@@ -2472,29 +1278,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 480,
-        "y": 960,
-        "wires": [
-            [
-                "a1575f74df16d6e8"
-            ]
-        ]
-    },
-    {
-        "id": "a1575f74df16d6e8",
-        "type": "rbe",
-        "z": "1ceb83823bf626ce",
-        "g": "63e881f2502c39c4",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "payload",
-        "topi": "topic",
-        "x": 750,
-        "y": 960,
+        "x": 500,
+        "y": 1340,
         "wires": [
             [
                 "09716c3d6333d5d6"
@@ -2521,56 +1306,84 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 930,
-        "y": 960,
+        "x": 950,
+        "y": 1340,
         "wires": [
-            []
+            [
+                "6992644613867616"
+            ]
         ]
     },
     {
-        "id": "4afb44ae000e02af",
+        "id": "6caf8c314a8f60c7",
+        "type": "change",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "flow.MaxChargeVoltage",
+        "rules": [
+            {
+                "t": "set",
+                "p": "MaxChargeVoltage",
+                "pt": "flow",
+                "to": "maxChargeVoltage",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 990,
+        "y": 1280,
+        "wires": [
+            [
+                "6992644613867616"
+            ]
+        ]
+    },
+    {
+        "id": "1017018f225b181e",
         "type": "function",
         "z": "1ceb83823bf626ce",
         "g": "63e881f2502c39c4",
-        "name": "calculate min/max cell voltage",
-        "func": "let minCellV1 = flow.get('minCellVoltage1')\nlet maxCellV1 = flow.get('maxCellVoltage1')\nlet minCellV2 = flow.get('minCellVoltage2')\nlet maxCellV2 = flow.get('maxCellVoltage2')\nlet minCellV = minCellV1 < minCellV2 ? minCellV1 : minCellV2\nlet maxCellV = maxCellV1 > maxCellV2 ? maxCellV1 : maxCellV2\n\n\nmsg.mincellv = minCellV\nmsg.maxcellv = maxCellV\n\nreturn msg;",
+        "name": "get smallest",
+        "func": "let arr = msg.payload\n\nif(arr.length == 2)\n{\n    let firstval = arr[0]\n    let secondval = arr[1]\n    \n    msg.payload = Math.min(firstval,secondval)\n    \n    return msg\n}\nelse{\n    node.error('array smallest not 2')\n    //safety measure\n    msg.payload = 3.65\n    return msg\n}\n\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 820,
+        "x": 1110,
+        "y": 900,
         "wires": [
             [
-                "5ce8a1baede77d3e",
-                "7c4da685b867180f"
+                "c6359613b6dc6e3d"
             ]
         ]
     },
     {
-        "id": "5ce8a1baede77d3e",
-        "type": "rbe",
+        "id": "1870d52ae22bc658",
+        "type": "function",
         "z": "1ceb83823bf626ce",
         "g": "63e881f2502c39c4",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "mincellv",
-        "topi": "topic",
-        "x": 750,
-        "y": 820,
+        "name": "transform u to signed",
+        "func": "const buf = Buffer.allocUnsafe(2);\n\nbuf.writeUInt16LE(msg.responseBuffer.data[0], 0);\n\nmsg = {};\nmsg.payload = buf.readInt16LE(0);\n\nmsg.payload /= 100\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 840,
         "wires": [
             [
-                "0630fd1cda4657cb"
+                "1209edc424942856"
             ]
         ]
     },
     {
-        "id": "0630fd1cda4657cb",
+        "id": "e9e06447ab8915e1",
         "type": "change",
         "z": "1ceb83823bf626ce",
         "g": "63e881f2502c39c4",
@@ -2580,7 +1393,7 @@
                 "t": "set",
                 "p": "MinCellVoltage",
                 "pt": "flow",
-                "to": "mincellv",
+                "to": "payload",
                 "tot": "msg"
             }
         ],
@@ -2589,35 +1402,16 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 950,
-        "y": 820,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7c4da685b867180f",
-        "type": "rbe",
-        "z": "1ceb83823bf626ce",
-        "g": "63e881f2502c39c4",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "maxcellv",
-        "topi": "topic",
-        "x": 750,
-        "y": 780,
+        "x": 1670,
+        "y": 900,
         "wires": [
             [
-                "e83efff32ec9653f"
+                "6992644613867616"
             ]
         ]
     },
     {
-        "id": "e83efff32ec9653f",
+        "id": "4d7a0663cecacc8b",
         "type": "change",
         "z": "1ceb83823bf626ce",
         "g": "63e881f2502c39c4",
@@ -2627,7 +1421,7 @@
                 "t": "set",
                 "p": "MaxCellVoltage",
                 "pt": "flow",
-                "to": "maxcellv",
+                "to": "payload",
                 "tot": "msg"
             }
         ],
@@ -2636,55 +1430,450 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 960,
-        "y": 780,
+        "x": 1680,
+        "y": 1180,
         "wires": [
-            []
+            [
+                "6992644613867616",
+                "6199e5585be19a82"
+            ]
         ]
     },
     {
-        "id": "ddd820525fcc55b3",
+        "id": "1209edc424942856",
+        "type": "join",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "",
+        "mode": "custom",
+        "build": "array",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "0.5",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 930,
+        "y": 900,
+        "wires": [
+            [
+                "1017018f225b181e"
+            ]
+        ]
+    },
+    {
+        "id": "f3d8b797bac8734f",
         "type": "function",
         "z": "1ceb83823bf626ce",
         "g": "63e881f2502c39c4",
-        "name": "calculate maxChargeVoltage",
-        "func": "\nmsg.payload = 54.40\n\nreturn msg;",
+        "name": "transform u to signed",
+        "func": "const buf = Buffer.allocUnsafe(2);\n\nbuf.writeUInt16LE(msg.responseBuffer.data[0], 0);\n\nmsg = {};\nmsg.payload = buf.readInt16LE(0);\n\nmsg.payload /= 100\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
-        "y": 920,
+        "x": 720,
+        "y": 880,
         "wires": [
             [
-                "1ba1c714fd86d385"
+                "1209edc424942856"
             ]
         ]
     },
     {
-        "id": "1ba1c714fd86d385",
-        "type": "rbe",
+        "id": "75b5e73ac8be721a",
+        "type": "function",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "transform u to signed",
+        "func": "const buf = Buffer.allocUnsafe(2);\n\nbuf.writeUInt16LE(msg.responseBuffer.data[0], 0);\n\nmsg = {};\nmsg.payload = buf.readInt16LE(0);\n\nmsg.payload /= 100\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 920,
+        "wires": [
+            [
+                "1209edc424942856"
+            ]
+        ]
+    },
+    {
+        "id": "f5885171fe40d66d",
+        "type": "function",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "transform u to signed",
+        "func": "const buf = Buffer.allocUnsafe(2);\n\nbuf.writeUInt16LE(msg.responseBuffer.data[0], 0);\n\nmsg = {};\nmsg.payload = buf.readInt16LE(0);\n\nmsg.payload /= 100\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 960,
+        "wires": [
+            [
+                "1209edc424942856"
+            ]
+        ]
+    },
+    {
+        "id": "8b5feac3f604635d",
+        "type": "join",
         "z": "1ceb83823bf626ce",
         "g": "63e881f2502c39c4",
         "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
+        "mode": "custom",
+        "build": "array",
         "property": "payload",
-        "topi": "topic",
-        "x": 750,
-        "y": 920,
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "0.5",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 910,
+        "y": 1180,
         "wires": [
             [
-                "6caf8c314a8f60c7"
+                "4cd8855c1ce4b800"
             ]
         ]
     },
     {
-        "id": "6caf8c314a8f60c7",
+        "id": "4cd8855c1ce4b800",
+        "type": "function",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "get largest",
+        "func": "let arr = msg.payload\n\nif(arr.length == 2)\n{\n    let firstval = arr[0]\n    let secondval = arr[1]\n    \n    msg.payload = Math.max(firstval,secondval)\n    \n    return msg\n}\nelse{\n    node.error('array largest not 2')\n    \n    //safety measure\n    msg.payload = 3.65\n    return msg\n}\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 1180,
+        "wires": [
+            [
+                "3bd638416fccd21c"
+            ]
+        ]
+    },
+    {
+        "id": "2db9d3181e3e30fe",
+        "type": "function",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "transform u to signed",
+        "func": "const buf = Buffer.allocUnsafe(2);\n\nbuf.writeUInt16LE(msg.responseBuffer.data[0], 0);\n\nmsg = {};\nmsg.payload = buf.readInt16LE(0);\n\nmsg.payload /= 100\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 1060,
+        "wires": [
+            [
+                "8b5feac3f604635d"
+            ]
+        ]
+    },
+    {
+        "id": "809358fdb56a221a",
+        "type": "function",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "transform u to signed",
+        "func": "const buf = Buffer.allocUnsafe(2);\n\nbuf.writeUInt16LE(msg.responseBuffer.data[0], 0);\n\nmsg = {};\nmsg.payload = buf.readInt16LE(0);\n\nmsg.payload /= 100\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 1100,
+        "wires": [
+            [
+                "8b5feac3f604635d"
+            ]
+        ]
+    },
+    {
+        "id": "b983c8e520366000",
+        "type": "function",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "transform u to signed",
+        "func": "const buf = Buffer.allocUnsafe(2);\n\nbuf.writeUInt16LE(msg.responseBuffer.data[0], 0);\n\nmsg = {};\nmsg.payload = buf.readInt16LE(0);\n\nmsg.payload /= 100\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 1140,
+        "wires": [
+            [
+                "8b5feac3f604635d"
+            ]
+        ]
+    },
+    {
+        "id": "cf1cfbbf8bcc2ff6",
+        "type": "function",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "transform u to signed",
+        "func": "const buf = Buffer.allocUnsafe(2);\n\nbuf.writeUInt16LE(msg.responseBuffer.data[0], 0);\n\nmsg = {};\nmsg.payload = buf.readInt16LE(0);\n\nmsg.payload /= 100\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 1180,
+        "wires": [
+            [
+                "8b5feac3f604635d"
+            ]
+        ]
+    },
+    {
+        "id": "674da6b6fc86a5c9",
+        "type": "change",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "flow.ModulesBlockingCharge",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ModulesBlockingCharge",
+                "pt": "flow",
+                "to": "modulesBlockingCharge",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 1460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c6359613b6dc6e3d",
+        "type": "function",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "buffer, only pass if all are the same",
+        "func": "let key = 'bufsmallest'\nlet maxBufLength = 2\n\nfunction allInArrayTheSame(arr){\n    \n    if(arr.length == 0)\n        return true\n    \n    let lastval = 0\n    \n    for(let i=0; i < arr.length; i++){\n        if(i == 0)\n            lastval = arr[i]\n            \n        if(lastval != arr[i])\n            return false\n        \n    }\n    return true\n}\n\n\nlet val = msg.payload\n\nlet buffer = flow.get(key) || [];\n\nbuffer.push(val)\n\nif(buffer.length > maxBufLength)\n    buffer.shift()\n\nflow.set(key, buffer)\n\nif(allInArrayTheSame(buffer)){\n    return msg\n    node.warn('vals the same')\n}\nelse\n    node.warn('vals not the same ignoring')\n\n\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1360,
+        "y": 900,
+        "wires": [
+            [
+                "e9e06447ab8915e1"
+            ]
+        ]
+    },
+    {
+        "id": "3bd638416fccd21c",
+        "type": "function",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "buffer, only pass if all are the same",
+        "func": "let key = 'buflargest'\nlet maxBufLength = 2\n\nfunction allInArrayTheSame(arr){\n    \n    if(arr.length == 0)\n        return true\n    \n    let lastval = 0\n    \n    for(let i=0; i < arr.length; i++){\n        if(i == 0)\n            lastval = arr[i]\n            \n        if(lastval != arr[i])\n            return false\n        \n    }\n    return true\n}\n\n\nlet val = msg.payload\n\nlet buffer = flow.get(key) || [];\n\nbuffer.push(val)\n\nif(buffer.length > maxBufLength)\n    buffer.shift()\n\nflow.set(key, buffer)\n\nif(allInArrayTheSame(buffer)){\n    return msg\n    node.warn('vals the same')\n}\nelse\n    node.warn('vals not the same ignoring')\n\n\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1360,
+        "y": 1180,
+        "wires": [
+            [
+                "4d7a0663cecacc8b"
+            ]
+        ]
+    },
+    {
+        "id": "90c6bc2d250d5265",
+        "type": "function",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "check not null",
+        "func": "let arr = msg.payload\n\nlet empty = false\n\nfor(let i in arr){\n    \n    if(isNaN(arr[i]))\n        empty = true\n}\n\nif(!empty)\n    return msg;\nelse\n    node.error('value was null')",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1960,
+        "y": 1380,
+        "wires": [
+            [
+                "664e91dbc5411359",
+                "33e227fa66e40998"
+            ]
+        ]
+    },
+    {
+        "id": "664e91dbc5411359",
+        "type": "mqtt out",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "",
+        "topic": "virtualbattery",
+        "qos": "1",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bbaaf0647a3e9b96",
+        "x": 2170,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "33e227fa66e40998",
+        "type": "debug",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "debug 22",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 2160,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "6992644613867616",
+        "type": "delay",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2050,
+        "y": 1200,
+        "wires": [
+            [
+                "177dc55d28340f8f"
+            ]
+        ]
+    },
+    {
+        "id": "177dc55d28340f8f",
+        "type": "function",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "flow to dictionary",
+        "func": "\n\nlet k1 = 'Soc'\nlet k2 = 'Current'\nlet k3 = 'Voltage'\nlet k4 = 'Power'\nlet k5 = 'MinCellTemperature'\nlet k6 = 'MaxCellTemperature'\nlet k7 = 'MaxChargeCurrent'\nlet k8 = 'MaxDischargeCurrent'\nlet k9 = 'MaxChargeVoltage'\nlet k10 = 'MaxCellVoltage'\nlet k11 = 'MinCellVoltage'\nlet k12 = 'ModulesBlockingCharge'\n\nlet arr = [k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11,k12]\n\n\nlet payload = {}\nfor(let i in arr){\n    let v = flow.get(arr[i]) ?? 0;\n    \n    payload[arr[i]] = v\n}\n\nmsg.payload = payload\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1750,
+        "y": 1380,
+        "wires": [
+            [
+                "90c6bc2d250d5265"
+            ]
+        ]
+    },
+    {
+        "id": "6199e5585be19a82",
+        "type": "PID",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "",
+        "setpoint": "3.50",
+        "pb": "0.6",
+        "ti": "11",
+        "td": "5",
+        "integral_default": "0.1",
+        "smooth_factor": "0",
+        "max_interval": "5",
+        "enable": 1,
+        "disabled_op": "53.8",
+        "x": 1430,
+        "y": 1460,
+        "wires": [
+            [
+                "2a32f3945d9f03f8"
+            ]
+        ]
+    },
+    {
+        "id": "2a32f3945d9f03f8",
+        "type": "range",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "minin": "0",
+        "maxin": "1",
+        "minout": "53.8",
+        "maxout": "55.2",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "x": 1590,
+        "y": 1460,
+        "wires": [
+            [
+                "49cbbc71d59b86db",
+                "aa86d8e17401402d"
+            ]
+        ]
+    },
+    {
+        "id": "49cbbc71d59b86db",
         "type": "change",
         "z": "1ceb83823bf626ce",
         "g": "63e881f2502c39c4",
@@ -2703,10 +1892,84 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 970,
-        "y": 920,
+        "x": 1830,
+        "y": 1460,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "aa86d8e17401402d",
+        "type": "debug",
+        "z": "1ceb83823bf626ce",
+        "g": "63e881f2502c39c4",
+        "name": "debug 25",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1780,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "f3d4d006239162ec",
+        "type": "modbus-client",
+        "name": "cerbogx",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "127.0.0.1",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "bbaaf0647a3e9b96",
+        "type": "mqtt-broker",
+        "name": "localhost",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
     }
 ]

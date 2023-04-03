@@ -32,6 +32,11 @@ This way you have full control over how and which information flows through the 
 
 see file exampleflow.json you can copy the contents to node-red and import it all at once.
 
+important! -> node-red uses this addons for the exampleflow. you can install them yourself through the node-red menu -> manage palette -> install
+
+- node-red-contrib-modbus
+- node-red-contrib-pid
+
 ![screenshot of node-red flow](https://github.com/arrow1800/Victron-VirtualBattery/blob/main/img/node-red-screenshot.png)
 
 ## How to - CerboGX
@@ -56,11 +61,11 @@ Reading data is done from within node-red. the most easiest way is using the def
 
 ### Sending data 
 
-As can be seen in the architecture image. The virtual battery driver itself sends requests to a running REST api in node-red. Node-red replies with a response (including all virtual battery settings) which is then processed by the virtual battery itself (python file)
+As can be seen in the architecture image. The virtual battery driver subsribes to the MQTT virtualbattery topic, any data that it receives on that topic will be processed. Node-red polls all the devices (smartshunt, bmsés, etc) and creates a dictionary that is being published to the same MQTT topic.
 
 ### Changing data
 
-All properties (soc, voltage, etc) are stored in flow variables. when the battery driver sends a request to node-red, node-red retrieves all this variables and constructs a dictionary that is send back. this is done in the function block named: flow to dictionary
+All properties (soc, voltage, etc) are stored in flow variables and used later on to construct a dictionary that is is published on the MQTT topic. 
 
 setting other max discharge values for example can be done by changing the current function blocks that are connected to the 'every second trigger' or just add new ones. make sure the result always ends up in one of the following flow variable names:
 
