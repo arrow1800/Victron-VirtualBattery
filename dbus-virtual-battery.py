@@ -111,10 +111,10 @@ class DbusVirtualBatService(object):
         "MaxCellTemperature" : 0,
         "MinCellTemperature" : 0,
         "MaxCellVoltage" : 3.65,
-        "MinCellVoltage" : 3.65,
+        "MinCellVoltage" : 2.70,
         "InternalFailure" : 1,
         "MaxChargeCurrent" : 0,
-        "MaxDischargeCurrent" : 200,
+        "MaxDischargeCurrent" : 0,
         "MaxChargeVoltage" : 53.8
         }'''
 
