@@ -18,7 +18,7 @@ class DbusVirtualBatService(object):
     lastMessage = time.time()
     timeoutInSeconds = None
 
-    def __init__(self, timeout, servicename='com.victronenergy.battery.virtual'):
+    def __init__(self, timeout, servicename='com.victronenergy.battery.virtual.test'):
         self.timeoutInSeconds = timeout
         self._dbusservice = VeDbusService(servicename)
         self._dbusConn = dbus.SessionBus(
@@ -26,7 +26,7 @@ class DbusVirtualBatService(object):
 
         # Create the mandatory objects
         self._dbusservice.add_mandatory_paths(processname=__file__, processversion='0.0', connection='Virtual',
-                                              deviceinstance=15, productid=0, productname='VirtualBattery MQTT', firmwareversion=0.1,
+                                              deviceinstance=19, productid=0, productname='VirtualBattery MQTT', firmwareversion=0.1,
                                               hardwareversion='0.0', connected=1)
 
         # Create DC paths
@@ -101,37 +101,29 @@ class DbusVirtualBatService(object):
         '''construct custom json obj
         call update manually
         '''
-
-        #json string data
-        data = '''{
-        "Voltage": 53.8, 
-        "Current": 0, 
-        "Power": 0,
-        "Soc" : 0,
-        "MaxCellTemperature" : 0,
-        "MinCellTemperature" : 0,
-        "MaxCellVoltage" : 3.65,
-        "MinCellVoltage" : 2.70,
-        "InternalFailure" : 1,
-        "MaxChargeCurrent" : 0,
-        "MaxDischargeCurrent" : 0,
-        "MaxChargeVoltage" : 53.8
-        }'''
-
-        data = json.loads(data)
-
-        self._update(data)
+        self._update(53.8, 'voltage')
+        self._update(0, 'current')
+        self._update(0, 'power')
+        self._update(0, 'soc')
+        self._update(0, 'maxCellTemperature')
+        self._update(0, 'minCellTemperature')
+        self._update(3.65, 'maxCellVoltage')
+        self._update(2.70, 'minCellVoltage')
+        self._update(1, 'internalFailure')
+        self._update(0, 'maxChargeCurrent')
+        self._update(0, 'maxDischargeCurrent')
+        self._update(53.8, 'maxChargeVoltage')
 
     def callback(self, client, userdata, msg):
-        # print(f"Received `{msg.payload.decode()}` from `{msg.topic}` topic")
-        data = json.loads(msg.payload)
+        
+        print(f"Received `{msg.payload.decode()}` from `{msg.topic}` topic")
+        
+        payload = float(msg.payload.decode())
+        topic = msg.topic.replace('virtualbattery/', '')
 
-        # in case we receive data we set this to 0
-        data['InternalFailure'] = 0
+        self._update(payload, topic)
 
-        self._update(data)
-
-    def _update(self, data):
+    def _update(self, payload, topic):
 
         try:
 
@@ -140,24 +132,48 @@ class DbusVirtualBatService(object):
 
             with self._dbusservice as bus:
 
-                bus['/Dc/0/Voltage'] = round(data.get('Voltage'), 2)
-                bus['/Dc/0/Current'] = round(data.get('Current'), 2)
-                bus['/Dc/0/Power'] = round(data.get('Power'), 0)
+                if topic == 'voltage':
+                    bus['/Dc/0/Voltage'] = payload
 
-                bus['/Soc'] = data.get('Soc')
+                if topic == 'current':
+                    bus['/Dc/0/Current'] = payload
+
+                if topic == 'power':
+                    bus['/Dc/0/Power'] = payload
+
+                if topic == 'soc':
+                    bus['/Soc'] = payload
+
+                if topic == 'maxCellTemperature':
+                    bus['/System/MaxCellTemperature'] = payload
+
+                if topic == 'minCellTemperature':
+                    bus['/System/MinCellTemperature'] = payload
+
+                if topic == 'maxCellVoltage':
+                    bus['/System/MaxCellVoltage'] = payload
+
+                if topic == 'minCellVoltage':
+                    bus['/System/MinCellVoltage'] = payload
+
+                if topic == 'maxChargeCurrent':
+                    bus['/Info/MaxChargeCurrent'] = payload
+
+                if topic == 'maxDischargeCurrent':
+                    bus['/Info/MaxDischargeCurrent'] = payload
+                
+                if topic == 'maxChargeVoltage':
+                    bus['/Info/MaxChargeVoltage'] = payload
+
+                bus['/Alarms/InternalFailure'] = 0
+
                 # bus['/Capacity'] = Capacity
                 # bus['/InstalledCapacity'] = InstalledCapacity
                 # bus['/ConsumedAmphours'] = ConsumedAmphours
 
                 # bus['/Dc/0/Temperature'] = Temperature
-                bus['/System/MaxCellTemperature'] = data.get(
-                    'MaxCellTemperature')
-                bus['/System/MinCellTemperature'] = data.get(
-                    'MinCellTemperature')
 
-                bus['/System/MaxCellVoltage'] = data.get('MaxCellVoltage')
                 # bus['/System/MaxVoltageCellId'] = MaxVoltageCellId
-                bus['/System/MinCellVoltage'] = data.get('MinCellVoltage')
                 # bus['/System/MinVoltageCellId'] = MinVoltageCellId
 
                 # bus['/System/NrOfCellsPerBattery'] = NrOfCellsPerBattery
@@ -173,25 +189,20 @@ class DbusVirtualBatService(object):
                 # bus['/Alarms/HighChargeCurrent'] = HighChargeCurrent_alarm
                 # bus['/Alarms/HighDischargeCurrent'] = HighDischargeCurrent_alarm
                 # bus['/Alarms/CellImbalance'] = CellImbalance_alarm
-                bus['/Alarms/InternalFailure'] = data.get('InternalFailure')
 
                 # bus['/Alarms/HighChargeTemperature'] = HighChargeTemperature_alarm
                 # bus['/Alarms/LowChargeTemperature'] = LowChargeTemperature_alarm
                 # bus['/Alarms/HighTemperature'] = HighChargeTemperature_alarm
                 # bus['/Alarms/LowTemperature'] = LowChargeTemperature_alarm
 
-                bus['/Info/MaxChargeCurrent'] = data.get('MaxChargeCurrent')
-                bus['/Info/MaxDischargeCurrent'] = data.get(
-                    'MaxDischargeCurrent')
-                bus['/Info/MaxChargeVoltage'] = data.get('MaxChargeVoltage')
-
                 self.lastMessage = time.time()
 
+                print(f'{dt.now()} updated dbus')
                 
         except Exception as e:
             logging.info(
                 f'{dt.now()}:{e}, error occurred during update, retrying..')
-            # print(f'{dt.now()}:{e}, error occurred during update, retrying..')
+            print(f'{dt.now()}:{e}, error occurred during update, retrying..')
             # self.setFailsafeSettings()
 
         return True
@@ -210,7 +221,7 @@ def main():
 
     # Configuration MQTT
     client = VictronMQTTClient(
-        'localhost', 1883, 'virtualbattery', customService.callback)
+        'localhost', 1883, 'virtualbattery/+', customService.callback)
     client.start()
 
     GLib.timeout_add_seconds(customService.timeoutInSeconds, customService.checkLastMessage)
